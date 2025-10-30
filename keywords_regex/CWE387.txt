@@ -1,0 +1,12 @@
+-> CWE-364
+.*signal.*
+.*handler.*
+.*race.*
+.*condition.*
+.*async.*
+.*interrupt.*
+.*unsafe.*
+.*concurrent.*
+.*reentrancy.*
+.*atomic.*
+.*handler.*bug.*

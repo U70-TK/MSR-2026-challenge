@@ -1,0 +1,13 @@
+-> CWE-645
+.*account.*
+.*lockout.*
+.*restrict.*
+.*too.*strict.*
+.*overly.*
+.*limit.*
+.*auth.*
+.*denial.*
+.*service.*
+.*disable.*
+.*block.*
+.*login.*

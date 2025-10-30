@@ -1,0 +1,84 @@
+-> CWE-242
+.*dangerous.*
+.*function.*
+.*unsafe.*
+.*use.*
+.*gets.*
+.*strcpy.*
+.*system.*
+.*eval.*
+.*exec.*
+.*call.*
+.*deprecated.*
+
+-> CWE-474
+.*inconsistent.*
+.*implementation.*
+.*function.*
+.*api.*
+.*cross.*
+.*platform.*
+.*different.*
+.*behavior.*
+.*bug.*
+.*compatibility.*
+
+-> CWE-475
+.*undefined.*
+.*behavior.*
+.*api.*
+.*invalid.*
+.*input.*
+.*edge.*
+.*case.*
+.*crash.*
+.*error.*
+.*bug.*
+
+-> CWE-477
+.*obsolete.*
+.*function.*
+.*deprecated.*
+.*legacy.*
+.*old.*
+.*replace.*
+.*remove.*
+.*unsafe.*
+.*api.*
+.*use.*
+
+-> CWE-676
+.*potentially.*
+.*dangerous.*
+.*function.*
+.*call.*
+.*exec.*
+.*system.*
+.*eval.*
+.*command.*
+.*risk.*
+.*unsafe.*
+
+-> CWE-695
+.*low.*
+.*level.*
+.*function.*
+.*direct.*
+.*api.*
+.*unsafe.*
+.*syscall.*
+.*hardware.*
+.*bypass.*
+.*primitive.*
+
+-> CWE-749
+.*exposed.*
+.*dangerous.*
+.*method.*
+.*function.*
+.*public.*
+.*endpoint.*
+.*api.*
+.*call.*
+.*exploit.*
+.*insecure.*

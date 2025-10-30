@@ -1,0 +1,50 @@
+-> CWE-322
+.*key.*
+.*exchange.*
+.*no.*auth.*
+.*unauthenticated.*
+.*handshake.*
+.*negotiation.*
+.*tls.*
+.*ssl.*
+.*missing.*verification.*
+.*man.*in.*the.*middle.*
+.*public.*key.*
+
+-> CWE-323
+.*reuse.*
+.*nonce.*
+.*key.*
+.*pair.*
+.*iv.*
+.*duplicate.*
+.*repeat.*
+.*random.*
+.*session.*
+.*predictable.*
+.*encrypt.*
+
+-> CWE-324
+.*key.*
+.*expired.*
+.*certificate.*
+.*rotate.*
+.*renew.*
+.*revoke.*
+.*expire.*
+.*old.*
+.*token.*
+.*update.*
+
+-> CWE-798
+.*hardcoded.*
+.*password.*
+.*token.*
+.*key.*
+.*credential.*
+.*secret.*
+.*default.*
+.*fixed.*
+.*embedded.*
+.*insecure.*
+.*constant.*
