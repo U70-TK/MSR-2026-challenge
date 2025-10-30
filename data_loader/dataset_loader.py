@@ -1,30 +1,28 @@
+from datasets import load_dataset
 import pandas as pd
-import os
 from constants.dataset_info import AIDev
 
 class Data_loader:
     def __init__(self, logger, huggingface_repo: str):
         self.logger = logger
-        self.data_dir = huggingface_repo
-        self._cache: dict[str, pd.DataFrame] = {}
+        self.repo = huggingface_repo.rstrip("/")
+        self._cache = {}
 
-    def _load_table(self, name: str):
+    def _load_table(self, name: str) -> pd.DataFrame | None:
         if name in self._cache:
             return self._cache[name]
 
-        parquet_file = f"{name}.parquet"
-        dataset_dir = self.data_dir + parquet_file
-
         try:
-            self.logger.info(f"{'-'*10} Loading {name} {'-'*10}")
-            df = pd.read_parquet(dataset_dir)
+            self.logger.info(f"Loading table '{name}' from {self.repo}")
+            dataset = load_dataset(self.repo, data_files=f"{name}.parquet", split="train")
+            df = dataset.to_pandas()
             self._cache[name] = df
-            self.logger.info(f"{'-'*10} Loaded {name} ({len(df):,} rows) {'-'*10}")
+            self.logger.info(f"Loaded {name} ({len(df):,} rows)")
             return df
         except Exception as e:
-            self.logger.error(f"Cannot load {dataset_dir}: {e}")
+            self.logger.error(f"Cannot load {name} from {self.repo}: {e}")
             return None
-
+        
     def get_all_pull_request(self):
         return self._load_table(AIDev.ALL_PULL_REQUEST.value)
 
