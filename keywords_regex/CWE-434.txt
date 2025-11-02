@@ -1,0 +1,14 @@
+-> CWE-434 Unrestricted Upload of File with Dangerous Type
+.*\bfile[\s\-]?upload[\s\-]?vulnerab.*\b.*
+.*\bunrestricted[\s\-]?file[\s\-]?upload\b.*
+.*\bimproper[\s\-]?file[\s\-]?type[\s\-]?check\b.*
+.*\bmissing[\s\-]?file[\s\-]?validation\b.*
+.*\bno[\s\-]?extension[\s\-]?check\b.*
+.*\bexecutable[\s\-]?upload\b.*
+.*\bscript[\s\-]?file[\s\-]?upload\b.*
+.*\buser[\s\-]?controlled[\s\-]?file\b.*
+.*\bmalicious[\s\-]?file[\s\-]?upload\b.*
+.*\bcontent[\s\-]?type[\s\-]?bypass\b.*
+.*\bfile[\s\-]?validation[\s\-]?missing\b.*
+.*\bupload[\s\-]?any[\s\-]?file\b.*
+.*\bfile[\s\-]?upload[\s\-]?bypass\b.*

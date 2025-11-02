@@ -1,14 +1,15 @@
 import os
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 class DF_writer:
     def __init__(self, output_dir: str):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
+        self.utc_minus_4 = timezone(timedelta(hours=-4))
 
     def _get_timestamped_path(self, prefix: str, extension: str = "parquet") -> str:
-        timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
+        timestamp = datetime.now(self.utc_minus_4).strftime("%Y-%m-%d-%H:%M:%S")
         filename = f"{prefix}_{timestamp}.{extension}"
         return os.path.join(self.output_dir, filename)
 

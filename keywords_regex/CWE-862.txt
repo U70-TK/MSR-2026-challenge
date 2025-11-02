@@ -1,0 +1,14 @@
+-> CWE-862 Missing Authorization
+.*\bmissing[\s\-]?authorization\b.*
+.*\bno[\s\-]?authorization[\s\-]?check\b.*
+.*\bunauthorized[\s\-]?access\b.*
+.*\bmissing[\s\-]?access[\s\-]?control\b.*
+.*\bmissing[\s\-]?role[\s\-]?check\b.*
+.*\bpermission[\s\-]?not[\s\-]?verified\b.*
+.*\bendpoint[\s\-]?unprotected\b.*
+.*\bno[\s\-]?acl\b.*
+.*\bopen[\s\-]?endpoint\b.*
+.*\bmissing[\s\-]?policy[\s\-]?check\b.*
+.*\buser[\s\-]?rights[\s\-]?not[\s\-]?checked\b.*
+.*\bauthoriz.*\b.*
+.*\bpermission\b.*

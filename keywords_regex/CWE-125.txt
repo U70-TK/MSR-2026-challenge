@@ -1,0 +1,16 @@
+-> CWE-125 Out-of-bounds Read
+.*\bout[\s\-]?of[\s\-]?bounds[\s\-]?read\b.*
+.*\bread[\s\-]?out[\s\-]?of[\s\-]?range\b.*
+.*\bbuffer[\s\-]?over[\s\-]?read\b.*
+.*\barray[\s\-]?index[\s\-]?error\b.*
+.*\bindex[\s\-]?out[\s\-]?of[\s\-]?range\b.*
+.*\baccess[\s\-]?beyond[\s\-]?buffer\b.*
+.*\bincorrect[\s\-]?index[\s\-]?check\b.*
+.*\boff[\s\-]?by[\s\-]?one\b.*
+.*\bmemory[\s\-]?corrupt\b.*
+.*\bunsafe[\s\-]?read\b.*
+.*\bunderflow\b.*
+.*\bload[\s\-]?past[\s\-]?end\b.*
+.*\barray\b.*
+.*\bindex\b.*
+.*\boffset\b.*

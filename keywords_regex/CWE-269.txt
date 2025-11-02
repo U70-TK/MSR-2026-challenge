@@ -1,0 +1,15 @@
+-> CWE-269 Improper Privilege Management
+.*\bprivilege[\s\-]?(escalation|bypass|misconfig|leak)\b.*
+.*\bimproper[\s\-]?privilege[\s\-]?management\b.*
+.*\bincorrect[\s\-]?privilege[\s\-]?check\b.*
+.*\bunsafe[\s\-]?permission\b.*
+.*\bmissing[\s\-]?privilege[\s\-]?drop\b.*
+.*\bprivilege[\s\-]?grant\b.*
+.*\belevate[\s\-]?privilege\b.*
+.*\bdrop[\s\-]?privilege\b.*
+.*\broot[\s\-]?access\b.*
+.*\bsudo\b.*
+.*\badmin\b.*
+.*\bsystem[\s\-]?access\b.*
+.*\buser[\s\-]?rights\b.*
+.*\bpermission\b.*

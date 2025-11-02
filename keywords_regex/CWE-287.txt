@@ -1,0 +1,21 @@
+-> CWE-287 Improper Authentication
+.*\bimproper[\s\-]?authentication\b.*
+.*\bweak[\s\-]?authentication\b.*
+.*\bmissing[\s\-]?authentication\b.*
+.*\bno[\s\-]?auth\b.*
+.*\bunauthenticated[\s\-]?access\b.*
+.*\btoken[\s\-]?not[\s\-]?verified\b.*
+.*\binvalid[\s\-]?token\b.*
+.*\bimproper[\s\-]?login\b.*
+.*\bmissing[\s\-]?password[\s\-]?check\b.*
+.*\bpassword[\s\-]?bypass\b.*
+.*\blogin[\s\-]?bypass\b.*
+.*\bmissing[\s\-]?session[\s\-]?check\b.*
+.*\bimproper[\s\-]?credential[\s\-]?use\b.*
+.*\bweak[\s\-]?login\b.*
+.*\bunauthenticated\b.*
+.*\blogin\b.*
+.*\blogged[\s\-]?in\b.*
+.*\bsession\b.*
+.*\bcredential\b.*
+.*\btoken\b.*

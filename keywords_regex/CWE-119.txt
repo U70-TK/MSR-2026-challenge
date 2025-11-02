@@ -1,0 +1,15 @@
+-> CWE-119 Improper Restriction of Operations within the Bounds of a Memory Buffer
+.*\bimproper[\s\-]?restriction[\s\-]?of[\s\-]?operations[\s\-]?within[\s\-]?memory[\s\-]?buffer\b.*
+.*\bmemory[\s\-]?corruption\b.*
+.*\bbuffer[\s\-]?(overflow|underflow)\b.*
+.*\bheap[\s\-]?(overflow|corrupt)\b.*
+.*\bstack[\s\-]?overflow\b.*
+.*\bindex[\s\-]?out[\s\-]?of[\s\-]?bounds\b.*
+.*\bimproper[\s\-]?buffer[\s\-]?use\b.*
+.*\bunsafe[\s\-]?memory[\s\-]?access\b.*
+.*\bpointer[\s\-]?arithmetic\b.*
+.*\binvalid[\s\-]?offset\b.*
+.*\bindex\b.*
+.*\bbuffer\b.*
+.*\bmemcpy\b.*
+.*\bstrcpy\b.*

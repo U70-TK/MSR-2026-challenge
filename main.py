@@ -1,8 +1,9 @@
 from app_instance import AppInstance
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
+utc_minus_4 = timezone(timedelta(hours=-4))
 KEYWORD_DIR = "./keywords_regex"
-LOG_DIR = f"./log/{datetime.now().strftime('%Y-%m-%d-%H:%M:%S')}"
+LOG_DIR = f"./log/{datetime.now(utc_minus_4).strftime('%Y-%m-%d-%H:%M:%S')}"
 HUGGING_FACE_REPO = "hao-li/AIDev/"
 OUTPUT_DIR = "./output"
 
@@ -12,7 +13,8 @@ def main():
         output_dir=OUTPUT_DIR,
         keyword_dir=KEYWORD_DIR,
         log_file_path=LOG_DIR,
-        huggingface_repo=HUGGING_FACE_REPO
+        huggingface_repo=HUGGING_FACE_REPO,
+        logger_id=datetime.now(utc_minus_4).strftime('%Y-%m-%d-%H:%M:%S')
     )
 
     app.match_pr_description()

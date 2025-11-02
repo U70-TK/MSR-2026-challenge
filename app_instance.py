@@ -7,6 +7,16 @@ import os
 import pandas as pd
 from tqdm import tqdm
 from constants.dataset_info import AIDev
+from multiprocessing import Pool, cpu_count, current_process
+from collections import Counter
+
+def _process_row(args):
+    row, compiled_regex_lst = args
+    body = str(row["body"]) if pd.notna(row["body"]) else ""
+    for pattern, regex_str in compiled_regex_lst:
+        if pattern.search(body):
+            return row["id"]
+    return None
 
 class AppInstance():
     def __init__(self, output_dir, huggingface_repo: str, keyword_dir: str, log_file_path:str, logger_id: str=datetime.now().strftime("%Y-%m-%d-%H:%M:%S")):
@@ -25,10 +35,8 @@ class AppInstance():
         if self._logger is not None:
             return self._logger
         os.makedirs(os.path.dirname(self.log_file_path), exist_ok=True)
-
         with open(self.log_file_path, "w") as f:
             f.write("")
-    
         logger = logging.getLogger(self.logger_id)
         logger.setLevel(logging.INFO)
         fh = logging.FileHandler(self.log_file_path)
@@ -51,7 +59,7 @@ class AppInstance():
         )
         self._keyword_loader = keyword_loader
         return self._keyword_loader
-    
+
     @property
     def data_writer(self):
         if self._data_writer is not None:
@@ -72,14 +80,10 @@ class AppInstance():
         )
         self._dataset_loader = dataset_loader
         return self._dataset_loader
-        
-    def match_any_regex(self, text: str):
-        return self.keyword_loader.match_any(text)
 
     def _load_table_with_name(self, table_name):
         if hasattr(table_name, "value"):
             table_name = table_name.value
-
         method_name = f"get_{table_name}"
         if hasattr(self.dataset_loader, method_name):
             return getattr(self.dataset_loader, method_name)()
@@ -99,7 +103,7 @@ class AppInstance():
         }.get(extension.lower())
 
         if save_method is None:
-            self.logger.warning(f"Unsupported file format: {extension}. Defaulting to parquet.")
+            self.logger.warning(f"Unsupported format: {extension}, exporting parquet.")
             save_method = self.data_writer.save_parquet
 
         output_path = save_method(df, prefix)
@@ -110,28 +114,51 @@ class AppInstance():
     def match_pr_description(self):
         all_pr_request = self._load_table_with_name(AIDev.ALL_PULL_REQUEST)
         if all_pr_request is None or "body" not in all_pr_request.columns:
-            self.logger.warning("ALL_PULL_REQUEST table not found or missing 'body' column.")
+            self.logger.warning("Missing 'body' column.")
             return
-        
+
         total_rows = len(all_pr_request)
-        self.logger.info(f"Scanning {total_rows:,} PR descriptions")
-        matched_records = []
-        
-        for _, row in tqdm(
-            all_pr_request.iterrows(),
-            total=total_rows,
-            desc="Scanning PR descriptions",
-            dynamic_ncols=True
-        ):
-            body = str(row["body"]) if pd.notna(row["body"]) else ""
-            if self.keyword_loader.match_any(body):
-                matched_records.append(row)
+        self.logger.info(f"Scanning {total_rows:,} PR descriptions dynamically...")
 
-        matched_count = len(matched_records)
-        self.logger.info(f"Found {matched_count:,} matching PRs out of {total_rows:,}")
+        if not self.keyword_loader.compiled_regex_lst:
+            self.keyword_loader._load_keywords()
+        compiled_regex_lst = self.keyword_loader.compiled_regex_lst
 
-        if matched_count > 0:
-            matched_df = pd.DataFrame(matched_records)
-            self._save_file_with_extension(matched_df, prefix="extracted_prs", extension="parquet")
-        else:
-            self.logger.info("No matching PRs found.")
+        num_cpus = max(1, cpu_count() - 1)
+
+        with Pool(processes=num_cpus) as pool:
+            results = list(
+                tqdm(
+                    pool.imap_unordered(
+                        _process_row,
+                        ((row, compiled_regex_lst) for _, row in all_pr_request.iterrows()),
+                        chunksize=100
+                    ),
+                    total=total_rows,
+                    desc="Multi-threaded",
+                    dynamic_ncols=True
+                )
+            )
+
+        all_counts = Counter()
+        matched_ids = []
+        for res_id, local_counts in tqdm(results, total=total_rows):
+            if res_id:
+                matched_ids.append(res_id)
+            all_counts.update(local_counts)
+
+        for regex, count in all_counts.items():
+            self.keyword_loader.regex_match_counts[regex] += count
+            
+        self.keyword_loader.log_regex_statistics()
+
+        matched_ids_df = pd.DataFrame(
+            matched_ids,
+            columns=["matched_ids"]
+        )
+
+        self._save_file_with_extension(
+            matched_ids_df, 
+            f"pr_description",
+            extension="parquet"
+        )

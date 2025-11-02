@@ -1,0 +1,17 @@
+-> CWE-190 Integer Overflow or Wraparound
+.*\binteger[\s\-]?(overflow|wrap[\s\-]?around|wraparound)\b.*
+.*\binteger[\s\-]?underflow\b.*
+.*\boverflow[\s\-]?error\b.*
+.*\barithmetic[\s\-]?overflow\b.*
+.*\bimproper[\s\-]?integer[\s\-]?conversion\b.*
+.*\btype[\s\-]?overflow\b.*
+.*\bunsigned[\s\-]?wrap\b.*
+.*\bcast[\s\-]?overflow\b.*
+.*\badd[\s\-]?overflow\b.*
+.*\bsub[\s\-]?overflow\b.*
+.*\bmultiply[\s\-]?overflow\b.*
+.*\bdivide[\s\-]?overflow\b.*
+.*\bbignum\b.*
+.*\bwrap\b.*
+.*\boverflow\b.*
+.*\bunderflow\b.*

@@ -1,0 +1,12 @@
+-> CWE-863 Incorrect Authorization
+.*\bincorrect[\s\-]?authorization\b.*
+.*\bimproper[\s\-]?authorization\b.*
+.*\bflawed[\s\-]?authorization\b.*
+.*\bwrong[\s\-]?permission[\s\-]?check\b.*
+.*\brole[\s\-]?bypass\b.*
+.*\baccess[\s\-]?control[\s\-]?error\b.*
+.*\bauthorization[\s\-]?failure\b.*
+.*\bmissing[\s\-]?role[\s\-]?verification\b.*
+.*\bincorrect[\s\-]?role[\s\-]?assignment\b.*
+.*\bprivilege[\s\-]?bypass\b.*
+.*\bunauthorized[\s\-]?access\b.*
