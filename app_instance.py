@@ -10,32 +10,7 @@ from constants.dataset_info import AIDev
 from multiprocessing import Pool, cpu_count, current_process
 from collections import Counter
 from typing import List
-
-def _process_row_pr_desc(args):
-    row, compiled_regex_lst = args
-    body = str(row["body"]) if pd.notna(row["body"]) else ""
-    local_counts = Counter()
-    matched_id = None
-
-    for pattern, regex_str in compiled_regex_lst:
-        if pattern.search(body):
-            matched_id = row["id"]
-            local_counts[regex_str] += 1
-
-    return (matched_id, local_counts)
-
-def _process_row_pr_commit_msg(args):
-    row, compiled_regex_lst = args
-    msg = str(row["message"]) if pd.notna(row["message"]) else ""
-    local_counts = Counter()
-    matched_id = None
-
-    for pattern, regex_str in compiled_regex_lst:
-        if pattern.search(msg):
-            matched_id = row["pr_id"]
-            local_counts[regex_str] += 1
-
-    return (matched_id, local_counts)
+from utils.row_processor import RowProcessors
 
 class AppInstance():
     def __init__(self, output_dir, huggingface_repo: str, keyword_dir: str, log_file_path:str, logger_id: str=datetime.now().strftime("%Y-%m-%d-%H:%M:%S")):
@@ -152,7 +127,7 @@ class AppInstance():
             results = list(
                 tqdm(
                     pool.imap_unordered(
-                        exec(f"{matching_func}()"),
+                        matching_func,
                         ((row, compiled_regex_lst) for _, row in matching_df.iterrows()),
                         chunksize=100
                     ),
@@ -179,7 +154,7 @@ class AppInstance():
     def match_pr_commits(self):
 
         matched_ids = self.match_dataframe_return_id(
-            matching_func=_process_row_pr_commit_msg.__name__,
+            matching_func=RowProcessors.process_pr_commit_message,
             subset_name=AIDev.PR_COMMITS,
             matching_column="message"
         )
@@ -197,7 +172,7 @@ class AppInstance():
 
     def match_human_pr_description(self):
         matched_ids = self.match_dataframe_return_id(
-            matching_func=_process_row_pr_desc.__name__,
+            matching_func=RowProcessors.process_pr_description,
             subset_name=AIDev.HUMAN_PULL_REQUEST,
             matching_column="body"
         )
@@ -215,7 +190,7 @@ class AppInstance():
 
     def match_pr_description(self):
         matched_ids = self.match_dataframe_return_id(
-            matching_func=_process_row_pr_desc.__name__,
+            matching_func=RowProcessors.process_pr_description,
             subset_name=AIDev.ALL_PULL_REQUEST,
             matching_column="body"
         )
