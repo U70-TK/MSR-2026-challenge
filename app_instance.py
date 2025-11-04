@@ -13,10 +13,15 @@ from collections import Counter
 def _process_row(args):
     row, compiled_regex_lst = args
     body = str(row["body"]) if pd.notna(row["body"]) else ""
+    local_counts = Counter()
+    matched_id = None
+
     for pattern, regex_str in compiled_regex_lst:
         if pattern.search(body):
-            return row["id"]
-    return None
+            matched_id = row["id"]
+            local_counts[regex_str] += 1
+
+    return (matched_id, local_counts)
 
 class AppInstance():
     def __init__(self, output_dir, huggingface_repo: str, keyword_dir: str, log_file_path:str, logger_id: str=datetime.now().strftime("%Y-%m-%d-%H:%M:%S")):
