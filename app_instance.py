@@ -9,6 +9,7 @@ from tqdm import tqdm
 from constants.dataset_info import AIDev
 from multiprocessing import Pool, cpu_count, current_process
 from collections import Counter
+from typing import List
 
 def _process_row(args):
     row, compiled_regex_lst = args
@@ -115,6 +116,121 @@ class AppInstance():
         if output_path:
             self.logger.info(f"Saved output to: {output_path}")
         return output_path
+    
+    def match_dataframe_return_id(self, matching_func: str, subset_name, matching_column: str) -> List:
+        if hasattr(subset_name, "value"):
+            subset_name = subset_name.value
+
+        matching_df = self._load_table_with_name(subset_name)
+
+        if matching_df is None or matching_column not in matching_df:
+            self.logger.warning(f"Dataframe {matching_df} missing {matching_column} column. ")
+            return
+        
+        total_rows = len(matching_df)
+        self.logger.info(f"Scanning {total_rows:,} {subset_name} dynamically...")
+
+        if not self.keyword_loader.compiled_regex_lst:
+            self.keyword_loader._load_keywords()
+        compiled_regex_lst = self.keyword_loader.compiled_regex_lst
+        num_cpus = max(1, cpu_count() - 1)
+
+        with Pool(processes=num_cpus) as pool:
+            results = list(
+                tqdm(
+                    pool.imap_unordered(
+                        exec(f"{matching_func}()"),
+                        ((row, compiled_regex_lst) for _, row in matching_df.iterrows()),
+                        chunksize=100
+                    ),
+                    total=total_rows,
+                    desc="Multi-threaded",
+                    dynamic_ncols=True
+                )
+            )
+
+        all_counts = Counter()
+        matched_ids = []
+        for res_id, local_counts in tqdm(results, total=total_rows):
+            if res_id:
+                matched_ids.append(res_id)
+            all_counts.update(local_counts)
+
+        for regex, count in all_counts.items():
+            self.keyword_loader.regex_match_counts[regex] += count
+            
+        self.keyword_loader.log_regex_statistics()
+
+        return matched_ids
+    
+    def match_pr_commits(self):
+        matched_id = self.match_dataframe_return_id(
+            matching_func=_process_row.__name__
+            subset_name=AIDev.PR_COMMITS
+            
+        )
+
+        matched_ids_df = pd.DataFrame(
+            matched_ids,
+            columns=["matched_ids"]
+        )
+
+        self._save_file_with_extension(
+            matched_ids_df, 
+            f"human_pr_description",
+            extension="parquet"
+        )
+
+    def match_human_pr_description(self):
+        human_pr = self._load_table_with_name(AIDev.HUMAN_PULL_REQUEST)
+        if human_pr is None or "body" not in human_pr.columns:
+            self.logger.warning("Missing 'body' column.")
+            return
+        
+        total_rows = len(human_pr)
+        self.logger.info(f"Scanning {total_rows:,} Human PR descriptions dynamically...")
+
+        if not self.keyword_loader.compiled_regex_lst:
+            self.keyword_loader._load_keywords()
+        compiled_regex_lst = self.keyword_loader.compiled_regex_lst
+        num_cpus = max(1, cpu_count() - 1)
+
+        with Pool(processes=num_cpus) as pool:
+            results = list(
+                tqdm(
+                    pool.imap_unordered(
+                        _process_row,
+                        ((row, compiled_regex_lst) for _, row in human_pr.iterrows()),
+                        chunksize=100
+                    ),
+                    total=total_rows,
+                    desc="Multi-threaded",
+                    dynamic_ncols=True
+                )
+            )
+
+        all_counts = Counter()
+        matched_ids = []
+        for res_id, local_counts in tqdm(results, total=total_rows):
+            if res_id:
+                matched_ids.append(res_id)
+            all_counts.update(local_counts)
+
+        for regex, count in all_counts.items():
+            self.keyword_loader.regex_match_counts[regex] += count
+            
+        self.keyword_loader.log_regex_statistics()
+
+        matched_ids_df = pd.DataFrame(
+            matched_ids,
+            columns=["matched_ids"]
+        )
+
+        self._save_file_with_extension(
+            matched_ids_df, 
+            f"human_pr_description",
+            extension="parquet"
+        )
 
     def match_pr_description(self):
         all_pr_request = self._load_table_with_name(AIDev.ALL_PULL_REQUEST)

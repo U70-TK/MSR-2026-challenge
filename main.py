@@ -17,7 +17,7 @@ def main():
         logger_id=datetime.now(utc_minus_4).strftime('%Y-%m-%d-%H:%M:%S')
     )
 
-    app.match_pr_description()
+    app.match_human_pr_description()
     
 
 if __name__ == '__main__':

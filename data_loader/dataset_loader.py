@@ -25,6 +25,9 @@ class Data_loader:
         
     def get_all_pull_request(self):
         return self._load_table(AIDev.ALL_PULL_REQUEST.value)
+    
+    def get_human_pull_request(self):
+        return self._load_table(AIDev.HUMAN_PULL_REQUEST.value)
 
     def get_all_repository(self):
         return self._load_table(AIDev.ALL_REPOSITORY.value)
