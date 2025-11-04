@@ -11,7 +11,7 @@ from multiprocessing import Pool, cpu_count, current_process
 from collections import Counter
 from typing import List
 
-def _process_row(args):
+def _process_row_pr_desc(args):
     row, compiled_regex_lst = args
     body = str(row["body"]) if pd.notna(row["body"]) else ""
     local_counts = Counter()
@@ -20,6 +20,19 @@ def _process_row(args):
     for pattern, regex_str in compiled_regex_lst:
         if pattern.search(body):
             matched_id = row["id"]
+            local_counts[regex_str] += 1
+
+    return (matched_id, local_counts)
+
+def _process_row_pr_commit_msg(args):
+    row, compiled_regex_lst = args
+    msg = str(row["message"]) if pd.notna(row["message"]) else ""
+    local_counts = Counter()
+    matched_id = None
+
+    for pattern, regex_str in compiled_regex_lst:
+        if pattern.search(msg):
+            matched_id = row["pr_id"]
             local_counts[regex_str] += 1
 
     return (matched_id, local_counts)
@@ -164,66 +177,34 @@ class AppInstance():
         return matched_ids
     
     def match_pr_commits(self):
-        matched_id = self.match_dataframe_return_id(
-            matching_func=_process_row.__name__
-            subset_name=AIDev.PR_COMMITS
-            
+
+        matched_ids = self.match_dataframe_return_id(
+            matching_func=_process_row_pr_commit_msg.__name__,
+            subset_name=AIDev.PR_COMMITS,
+            matching_column="message"
         )
 
         matched_ids_df = pd.DataFrame(
             matched_ids,
-            columns=["matched_ids"]
+            columns=["matched_pr_ids"]
         )
 
         self._save_file_with_extension(
             matched_ids_df, 
-            f"human_pr_description",
+            f"pr_commit_msg_description",
             extension="parquet"
         )
 
     def match_human_pr_description(self):
-        human_pr = self._load_table_with_name(AIDev.HUMAN_PULL_REQUEST)
-        if human_pr is None or "body" not in human_pr.columns:
-            self.logger.warning("Missing 'body' column.")
-            return
-        
-        total_rows = len(human_pr)
-        self.logger.info(f"Scanning {total_rows:,} Human PR descriptions dynamically...")
-
-        if not self.keyword_loader.compiled_regex_lst:
-            self.keyword_loader._load_keywords()
-        compiled_regex_lst = self.keyword_loader.compiled_regex_lst
-        num_cpus = max(1, cpu_count() - 1)
-
-        with Pool(processes=num_cpus) as pool:
-            results = list(
-                tqdm(
-                    pool.imap_unordered(
-                        _process_row,
-                        ((row, compiled_regex_lst) for _, row in human_pr.iterrows()),
-                        chunksize=100
-                    ),
-                    total=total_rows,
-                    desc="Multi-threaded",
-                    dynamic_ncols=True
-                )
-            )
-
-        all_counts = Counter()
-        matched_ids = []
-        for res_id, local_counts in tqdm(results, total=total_rows):
-            if res_id:
-                matched_ids.append(res_id)
-            all_counts.update(local_counts)
-
-        for regex, count in all_counts.items():
-            self.keyword_loader.regex_match_counts[regex] += count
-            
-        self.keyword_loader.log_regex_statistics()
+        matched_ids = self.match_dataframe_return_id(
+            matching_func=_process_row_pr_desc.__name__,
+            subset_name=AIDev.HUMAN_PULL_REQUEST,
+            matching_column="body"
+        )
 
         matched_ids_df = pd.DataFrame(
             matched_ids,
-            columns=["matched_ids"]
+            columns=["matched_pr_ids"]
         )
 
         self._save_file_with_extension(
@@ -233,49 +214,15 @@ class AppInstance():
         )
 
     def match_pr_description(self):
-        all_pr_request = self._load_table_with_name(AIDev.ALL_PULL_REQUEST)
-        if all_pr_request is None or "body" not in all_pr_request.columns:
-            self.logger.warning("Missing 'body' column.")
-            return
-
-        total_rows = len(all_pr_request)
-        self.logger.info(f"Scanning {total_rows:,} PR descriptions dynamically...")
-
-        if not self.keyword_loader.compiled_regex_lst:
-            self.keyword_loader._load_keywords()
-        compiled_regex_lst = self.keyword_loader.compiled_regex_lst
-
-        num_cpus = max(1, cpu_count() - 1)
-
-        with Pool(processes=num_cpus) as pool:
-            results = list(
-                tqdm(
-                    pool.imap_unordered(
-                        _process_row,
-                        ((row, compiled_regex_lst) for _, row in all_pr_request.iterrows()),
-                        chunksize=100
-                    ),
-                    total=total_rows,
-                    desc="Multi-threaded",
-                    dynamic_ncols=True
-                )
-            )
-
-        all_counts = Counter()
-        matched_ids = []
-        for res_id, local_counts in tqdm(results, total=total_rows):
-            if res_id:
-                matched_ids.append(res_id)
-            all_counts.update(local_counts)
-
-        for regex, count in all_counts.items():
-            self.keyword_loader.regex_match_counts[regex] += count
-            
-        self.keyword_loader.log_regex_statistics()
+        matched_ids = self.match_dataframe_return_id(
+            matching_func=_process_row_pr_desc.__name__,
+            subset_name=AIDev.ALL_PULL_REQUEST,
+            matching_column="body"
+        )
 
         matched_ids_df = pd.DataFrame(
             matched_ids,
-            columns=["matched_ids"]
+            columns=["matched_pr_ids"]
         )
 
         self._save_file_with_extension(
