@@ -1,0 +1,8 @@
+2025-11-01 03:35:54,667 - 2025-10-31-23:35:54 - INFO - Loading table 'all_pull_request' from hao-li/AIDev
+2025-11-01 03:35:57,936 - 2025-10-31-23:35:54 - INFO - Loaded all_pull_request (932,791 rows)
+2025-11-01 03:35:57,991 - 2025-10-31-23:35:54 - INFO - Scanning 932,791 PR descriptions using multiprocessing...
+2025-11-01 03:35:57,992 - 2025-10-31-23:35:54 - INFO - ---------- Loading keyword list ----------
+2025-11-01 03:35:58,001 - 2025-10-31-23:35:54 - INFO - Collected 414 unique regex patterns
+2025-11-01 03:35:58,038 - 2025-10-31-23:35:54 - INFO - Successfully compiled 414 regex patterns.
+2025-11-01 03:35:58,038 - 2025-10-31-23:35:54 - INFO - ---------- Loading keyword finished ----------
+2025-11-01 03:35:58,040 - 2025-10-31-23:35:54 - INFO - Using 48 processes, 48 chunks

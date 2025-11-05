@@ -6,9 +6,6 @@ __pycache__/
 output/
 *.parquet
 
-# Local log
-log/
-
 # C extensions
 *.so
 
@@ -62,7 +59,6 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
