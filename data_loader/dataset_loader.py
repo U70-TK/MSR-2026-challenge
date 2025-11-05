@@ -1,4 +1,3 @@
-from datasets import load_dataset
 import pandas as pd
 from constants.dataset_info import AIDev
 
@@ -14,8 +13,11 @@ class Data_loader:
 
         try:
             self.logger.info(f"Loading table '{name}' from {self.repo}")
-            dataset = load_dataset(self.repo, data_files=f"{name}.parquet", split="train")
-            df = dataset.to_pandas()
+            
+            self.logger.info(f"{self.repo}{name}.parquet")
+            df = pd.read_parquet(f"{self.repo}/{name}.parquet")
+            # dataset = load_dataset(self.repo, data_files=f"{name}.parquet", split="train")
+            # df = dataset.to_pandas()
             self._cache[name] = df
             self.logger.info(f"Loaded {name} ({len(df):,} rows)")
             return df

@@ -18,6 +18,20 @@ class RowProcessors:
         return matched_id, local_counts
 
     @staticmethod
+    def process_pr_title(args):
+        row, compiled_regex_lst = args
+        title = str(row.get("title", "")) if pd.notna(row.get("title", "")) else ""
+        local_counts = Counter()
+        matched_pr_id = None
+
+        for pattern, regex_str in compiled_regex_lst:
+            if pattern.search(title):
+                matched_pr_id = row["id"]
+                local_counts[regex_str] += 1
+        
+        return matched_pr_id, local_counts
+
+    @staticmethod
     def process_pr_commit_message(args):
         row, compiled_regex_lst = args
         msg = str(row.get("message", "")) if pd.notna(row.get("message", "")) else ""

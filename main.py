@@ -6,6 +6,7 @@ KEYWORD_DIR = "./keywords_regex"
 LOG_DIR = f"./log/{datetime.now(utc_minus_4).strftime('%Y-%m-%d-%H:%M:%S')}"
 HUGGING_FACE_REPO = "hao-li/AIDev/"
 OUTPUT_DIR = "./output"
+BASE_DATASET_URL = f"hf://datasets/{HUGGING_FACE_REPO}"
 
 def main():
     
@@ -13,11 +14,11 @@ def main():
         output_dir=OUTPUT_DIR,
         keyword_dir=KEYWORD_DIR,
         log_file_path=LOG_DIR,
-        huggingface_repo=HUGGING_FACE_REPO,
+        huggingface_repo=BASE_DATASET_URL,
         logger_id=datetime.now(utc_minus_4).strftime('%Y-%m-%d-%H:%M:%S')
     )
 
-    app.match_human_pr_description()
+    app.match_pr_title()
     
 
 if __name__ == '__main__':

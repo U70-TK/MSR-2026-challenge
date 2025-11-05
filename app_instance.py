@@ -205,3 +205,21 @@ class AppInstance():
             f"pr_description",
             extension="parquet"
         )
+
+    def match_pr_title(self):
+        matched_ids = self.match_dataframe_return_id(
+            matching_func=RowProcessors.process_pr_title,
+            subset_name=AIDev.ALL_PULL_REQUEST,
+            matching_column="title"
+        )
+
+        matched_ids_df = pd.DataFrame(
+            matched_ids,
+            columns=["matched_pr_ids"]
+        )
+
+        self._save_file_with_extension(
+            matched_ids_df, 
+            f"pr_title",
+            extension="parquet"
+        )
