@@ -1,5 +1,4 @@
 -> CWE-502 Deserialization of Untrusted Data
-.*\bdeserializ.*\b.*
 .*\bdeserialize[\s\-]?untrusted\b.*
 .*\bobject[\s\-]?injection\b.*
 .*\bserialized[\s\-]?data[\s\-]?attack\b.*

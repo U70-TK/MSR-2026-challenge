@@ -1,6 +1,4 @@
 -> CWE-400 Uncontrolled Resource Consumption
-.*\bresource[\s\-]?exhaust.*\b.*
-.*\bdenial[\s\-]?of[\s\-]?service\b.*
 .*\bdos\b.*
 .*\bloop[\s\-]?without[\s\-]?limit\b.*
 .*\binfinite[\s\-]?loop\b.*

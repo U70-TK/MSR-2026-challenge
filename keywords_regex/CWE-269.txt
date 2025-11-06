@@ -1,15 +1,14 @@
 -> CWE-269 Improper Privilege Management
-.*\bprivilege[\s\-]?(escalation|bypass|misconfig|leak)\b.*
-.*\bimproper[\s\-]?privilege[\s\-]?management\b.*
-.*\bincorrect[\s\-]?privilege[\s\-]?check\b.*
-.*\bunsafe[\s\-]?permission\b.*
+.*\bprivilege[\s\-]?(escalat(ion|e[sd]?)|bypass(e[sd])?|misconfig((ure[sd])?|uration|(e[sd])?)|leak(age|s|ed)?)\b.*
+.*\bprivilege[\s\-]?management\b.*
+.*\bprivilege[\s\-]?check\b.*
+.*\b(unsafe|incorrect|misconfigured)[\s\-]?permission\b.*
 .*\bmissing[\s\-]?privilege[\s\-]?drop\b.*
-.*\bprivilege[\s\-]?grant\b.*
-.*\belevate[\s\-]?privilege\b.*
-.*\bdrop[\s\-]?privilege\b.*
-.*\broot[\s\-]?access\b.*
+.*\bprivilege[\s\-]?grant.{0,30}\b.*
+.*\belevate[sd]?.{0,30}privilege\b.*
+.*\bdrop(s|ped)?.{0,30}privilege\b.*
+.*\broot[\s\-]?(access|privilege)\b.*
 .*\bsudo\b.*
 .*\badmin\b.*
-.*\bsystem[\s\-]?access\b.*
+.*\bsystem[\s\-]?(access|privilege)\b.*
 .*\buser[\s\-]?rights\b.*
-.*\bpermission\b.*

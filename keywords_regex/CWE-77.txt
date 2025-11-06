@@ -2,7 +2,7 @@
 .*\b(command[\s\-]?injection|shell[\s\-]?injection|os[\s\-]?command[\s\-]?injection)\b.*
 .*\b(improper|missing|unsafe|incomplete|insufficient)[\s\-]?(neutralization|validation|sanitiz|escaping|escape|encoding)\b.*
 .*\b(unvalidated|untrusted|tainted|user[\s\-]?controlled)[\s\-]?(input|parameter|argument|data)\b.*
-.*\b(passes?\s+user|concats?|constructs?|builds?)\s+(a\s+)?(shell|command|cmd|system)\b.*
+.*\b(pass(es)?\s+user|concats?|constructs?|builds?)\s+(a\s+)?(shell|command|cmd|system)\b.*
 .*\b(execute|executes?|run|spawn|invoke).{0,30}\b(command|shell|process|os\.system)\b.*
 .*\b(backtick\s*shell|`[^`]+`)\b.*
 .*\b(cmd\.exe|powershell|pwsh|bash|sh)\b.*

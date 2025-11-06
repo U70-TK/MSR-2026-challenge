@@ -1,12 +1,11 @@
 -> CWE-863 Incorrect Authorization
-.*\bincorrect[\s\-]?authorization\b.*
-.*\bimproper[\s\-]?authorization\b.*
-.*\bflawed[\s\-]?authorization\b.*
-.*\bwrong[\s\-]?permission[\s\-]?check\b.*
-.*\brole[\s\-]?bypass\b.*
-.*\baccess[\s\-]?control[\s\-]?error\b.*
-.*\bauthorization[\s\-]?failure\b.*
-.*\bmissing[\s\-]?role[\s\-]?verification\b.*
-.*\bincorrect[\s\-]?role[\s\-]?assignment\b.*
-.*\bprivilege[\s\-]?bypass\b.*
-.*\bunauthorized[\s\-]?access\b.*
+.*\bincorrect.{0,30}authorization\b.*
+.*\bimproper.{0,30}authorization\b.*
+.*\bflawed.{0,30}authorization\b.*
+.*\b(wrong|incorrect).{0,30}permission.{0,30}(check|grant)\b.*
+.*\brole.{0,30}bypass\b.*
+.*\baccess[\s\-]?control\b.*
+.*\bauthorization.{0,30}failure\b.*
+.*\bmissing.{0,30}role.{0,30}verification\b.*
+.*\bincorrect.{0,30}role.{0,30}assignment\b.*
+.*\bprivilege.{0,30}bypass\b.*

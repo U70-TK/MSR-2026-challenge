@@ -1,5 +1,5 @@
 -> CWE-798 Use of Hard-Coded Credentials
-.*\bhard[\s\-]?coded[\s\-]?credential.*\b.*
+.*\bhard[\s\-]?coded[\s\-]?(credential.*|sensitive.*)\b.*
 .*\bhard[\s\-]?coded[\s\-]?(password|key|secret|token)\b.*
 .*\bcredential[\s\-]?in[\s\-]?code\b.*
 .*\bpassword[\s\-]?literal\b.*

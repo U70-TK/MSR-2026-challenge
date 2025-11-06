@@ -6,7 +6,6 @@
 .*\bfail.*\b.*
 .*\bvulnerab.*\b.*
 .*\bweak.*\b.*
-.*\bauthoriz.*\b.*
 .*\bauthenticat.*\b.*
 .*\bunsafe.*\b.*
 .*\bincorrect.*\b.*
@@ -20,7 +19,6 @@
 .*\bprivilege.*\b.*
 .*\bescalat.*\b.*
 .*\baccess[\s\-]?control.*\b.*
-.*\boverflow.*\b.*
 .*\bunderflow.*\b.*
 .*\btraversal.*\b.*
 .*\binvalid.*\b.*
@@ -39,7 +37,6 @@
 .*\bcleanup.*\b.*
 .*\bhandle.*\b.*
 .*\bexception.*\b.*
-.*\bmemory[\s\-]?corrupt.*\b.*
 .*\bunauthoriz.*\b.*
 .*\bmalform.*\b.*
 .*\bunsanitiz.*\b.*
@@ -47,10 +44,8 @@
 .*\bexcess.*\b.*
 .*\bimproperly.*\b.*
 .*\bmismatch.*\b.*
-.*\bexpos.*\b.*
 .*\bmisconfig.*\b.*
 .*\bincorrectly.*\b.*
-.*\bincorrect.*\b.*
 .*\buncheck.*\b.*
 .*\bunsaf.*\b.*
 .*\bunspecif.*\b.*

@@ -2,8 +2,8 @@
 .*\bfile[\s\-]?upload[\s\-]?vulnerab.*\b.*
 .*\bunrestricted[\s\-]?file[\s\-]?upload\b.*
 .*\bimproper[\s\-]?file[\s\-]?type[\s\-]?check\b.*
-.*\bmissing[\s\-]?file[\s\-]?validation\b.*
-.*\bno[\s\-]?extension[\s\-]?check\b.*
+.*\bmissing[\s\-]?file[\s\-]?(validation|sanitization)\b.*
+.*\bextension[\s\-]?check\b.*
 .*\bexecutable[\s\-]?upload\b.*
 .*\bscript[\s\-]?file[\s\-]?upload\b.*
 .*\buser[\s\-]?controlled[\s\-]?file\b.*

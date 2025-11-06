@@ -1,8 +1,4 @@
--> Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
-.*\bxss\b.*
-.*\bcross[\s\-]?site[\s\-]?scripting\b.*
-.*\breflected[\s\-]?xss\b.*
-.*\bstored[\s\-]?xss\b.*
+-> CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
 .*\bdom[\s\-]?based[\s\-]?xss\b.*
 .*\bscript[\s\-]?injection\b.*
 .*xss.*
@@ -10,8 +6,6 @@
 .*script.*
 .*javascript.*
 .*html.*
-.*escape.*
-.*sanitize.*
 .*encode.*
 .*reflect.*
 .*stored.*

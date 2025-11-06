@@ -2,15 +2,10 @@
 .*\bout[\s\-]?of[\s\-]?bounds[\s\-]?write\b.*
 .*\bbuffer[\s\-]?overflow\b.*
 .*\bheap[\s\-]?overflow\b.*
-.*\bstack[\s\-]?overflow\b.*
 .*\boverwrite[\s\-]?memory\b.*
 .*\bmemory[\s\-]?corrupt.*\b.*
-.*\barray[\s\-]?index[\s\-]?error\b.*
-.*\bindex[\s\-]?out[\s\-]?of[\s\-]?range\b.*
 .*\bsegmentation[\s\-]?fault\b.*
-.*\bmemcpy\b.*
 .*\bmemmove\b.*
-.*\bstrcpy\b.*
 .*\bstrcat\b.*
 .*\bmemset\b.*
 .*\bmalloc\b.*
@@ -22,5 +17,3 @@
 .*\bstack.*\b.*
 .*segfault.*
 .*\bboundary\b.*
-.*\bindex\b.*
-.*\boffset\b.*

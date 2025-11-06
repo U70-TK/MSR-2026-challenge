@@ -1,4 +1,4 @@
--> Improper Input Validation
+-> CWE-20 Improper Input Validation
 .*\b(improper|missing|unsafe)[\s\-]?neutralization\b.*
 .*\bcross[\s\-]?site[\s\-]?scripting\b.*
 .*\bxss\b.*
@@ -16,7 +16,6 @@
 .*\breflected[\s\-]?xss\b.*
 .*\bstored[\s\-]?xss\b.*
 .*\bescape[\s\-]?html\b.*
-.*\bunsanitiz.*\b.*
 .*\bsanitiz.*\b.*
 .*\bencode.*\b.*
 .*\bdecode.*\b.*

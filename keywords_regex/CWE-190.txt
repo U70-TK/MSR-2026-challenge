@@ -6,12 +6,11 @@
 .*\bimproper[\s\-]?integer[\s\-]?conversion\b.*
 .*\btype[\s\-]?overflow\b.*
 .*\bunsigned[\s\-]?wrap\b.*
-.*\bcast[\s\-]?overflow\b.*
-.*\badd[\s\-]?overflow\b.*
-.*\bsub[\s\-]?overflow\b.*
-.*\bmultiply[\s\-]?overflow\b.*
-.*\bdivide[\s\-]?overflow\b.*
-.*\bbignum\b.*
+.*\bcast(ing)?[\s\-]?overflow\b.*
+.*\badd(ition)?[\s\-]?overflow\b.*
+.*\bsub(traction)?[\s\-]?overflow\b.*
+.*\bmultipl(ication|y)[\s\-]?overflow\b.*
+.*\bdivi(de|sion)[\s\-]?overflow\b.*
+.*\b(big|huge) num.*\b.*
 .*\bwrap\b.*
 .*\boverflow\b.*
-.*\bunderflow\b.*

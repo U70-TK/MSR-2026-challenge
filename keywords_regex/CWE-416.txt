@@ -12,4 +12,3 @@
 .*\bfreed[\s\-]?object\b.*
 .*\binvalid[\s\-]?reference\b.*
 .*\bheap[\s\-]?bug\b.*
-.*\bmemory[\s\-]?leak\b.*
