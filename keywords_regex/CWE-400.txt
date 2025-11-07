@@ -1,13 +1,13 @@
 -> CWE-400 Uncontrolled Resource Consumption
-.*\bdos\b.*
-.*\bloop[\s\-]?without[\s\-]?limit\b.*
-.*\binfinite[\s\-]?loop\b.*
-.*\bno[\s\-]?throttling\b.*
-.*\bmissing[\s\-]?rate[\s\-]?limit\b.*
-.*\bunbounded[\s\-]?allocation\b.*
-.*\bmemory[\s\-]?leak\b.*
-.*\bresource[\s\-]?leak\b.*
-.*\bno[\s\-]?release[\s\-]?of[\s\-]?resource\b.*
-.*\bopen[\s\-]?connection[\s\-]?leak\b.*
-.*\bthread[\s\-]?spawn\b.*
-.*\bunlimited[\s\-]?creation\b.*
+\bdos\b
+\bloop[\s\-]?without[\s\-]?limit\b
+\binfinite[\s\-]?loop\b
+\bno[\s\-]?throttling\b
+\bmissing[\s\-]?rate[\s\-]?limit\b
+\bunbounded[\s\-]?allocation\b
+\bmemory[\s\-]?leak\b
+\bresource[\s\-]?leak\b
+\bno[\s\-]?release[\s\-]?of[\s\-]?resource\b
+\bopen[\s\-]?connection[\s\-]?leak\b
+\bthread[\s\-]?spawn\b
+\bunlimited[\s\-]?creation\b

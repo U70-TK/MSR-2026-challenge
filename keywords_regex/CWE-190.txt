@@ -1,16 +1,16 @@
 -> CWE-190 Integer Overflow or Wraparound
-.*\binteger[\s\-]?(overflow|wrap[\s\-]?around|wraparound)\b.*
-.*\binteger[\s\-]?underflow\b.*
-.*\boverflow[\s\-]?error\b.*
-.*\barithmetic[\s\-]?overflow\b.*
-.*\bimproper[\s\-]?integer[\s\-]?conversion\b.*
-.*\btype[\s\-]?overflow\b.*
-.*\bunsigned[\s\-]?wrap\b.*
-.*\bcast(ing)?[\s\-]?overflow\b.*
-.*\badd(ition)?[\s\-]?overflow\b.*
-.*\bsub(traction)?[\s\-]?overflow\b.*
-.*\bmultipl(ication|y)[\s\-]?overflow\b.*
-.*\bdivi(de|sion)[\s\-]?overflow\b.*
-.*\b(big|huge) num.*\b.*
-.*\bwrap\b.*
-.*\boverflow\b.*
+\binteger[\s\-]?(overflow|wrap[\s\-]?around|wraparound)\b
+\binteger[\s\-]?underflow\b
+\boverflow[\s\-]?error\b
+\barithmetic[\s\-]?overflow\b
+\bimproper[\s\-]?integer[\s\-]?conversion\b
+\btype[\s\-]?overflow\b
+\bunsigned[\s\-]?wrap\b
+\bcast(ing)?[\s\-]?overflow\b
+\badd(ition)?[\s\-]?overflow\b
+\bsub(traction)?[\s\-]?overflow\b
+\bmultipl(ication|y)[\s\-]?overflow\b
+\bdivi(de|sion)[\s\-]?overflow\b
+\b(big|huge) num.*\b
+\bwrap\b
+\boverflow\b

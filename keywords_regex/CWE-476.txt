@@ -1,12 +1,12 @@
 -> CWE-476 NULL Pointer Dereference
-.*\bnull[\s\-]?pointer[\s\-]?dereference\b.*
-.*\bnull[\s\-]?reference\b.*
-.*\bnull[\s\-]?access\b.*
-.*\bmissing[\s\-]?null[\s\-]?check\b.*
-.*\bcheck[\s\-]?for[\s\-]?null\b.*
-.*\buninitialized[\s\-]?pointer\b.*
-.*\bpointer[\s\-]?not[\s\-]?checked\b.*
-.*\bsegfault\b.*
-.*\bnpe\b.*
-.*\baccess[\s\-]?null\b.*
-.*\bdereference[\s\-]?null\b.*
+\bnull[\s\-]?pointer[\s\-]?dereference\b
+\bnull[\s\-]?reference\b
+\bnull[\s\-]?access\b
+\bmissing[\s\-]?null[\s\-]?check\b
+\bcheck[\s\-]?for[\s\-]?null\b
+\buninitialized[\s\-]?pointer\b
+\bpointer[\s\-]?not[\s\-]?checked\b
+\bsegfault\b
+\bnpe\b
+\baccess[\s\-]?null\b
+\bdereference[\s\-]?null\b

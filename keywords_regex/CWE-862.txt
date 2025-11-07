@@ -1,14 +1,14 @@
 -> CWE-862 Missing Authorization
-.*\bmiss(ing|es|ed)?.{0,30}authorization\b.*
-.*\bnot?.{0,30}authoriz(ed|ation)\b.*
-.*\bunauthorized.{0,30}access\b.*
-.*\bmiss(ing|es|ed)?.{0,30}access[\s\-]?control\b.*
-.*\bmiss(ing|es|ed)?.{0,30}role[\s\-]?check\b.*
-.*\bpermission[\s\-]?(not[\s\-]?verified|unverified)\b.*
-.*\bendpoint[\s\-](is not |un)protected|(un)?protected[\s\-]?endpoint\b.*
-.*\bno[\s\-]?acl\b.*
-.*\bopen[\s\-]?endpoint\b.*
-.*\bmiss(ing|es|ed)?.{0,30}policy[\s\-]?check\b.*
-.*\buser[\s\-]?rights[\s\-]?not[\s\-]?checked\b.*
-.*\bauthoriz.*\b.*
-.*\bpermission\b.*
+\bmiss(ing|es|ed)?.{0,30}authorization\b
+\bnot?.{0,30}authoriz(ed|ation)\b
+\bunauthorized.{0,30}access\b
+\bmiss(ing|es|ed)?.{0,30}access[\s\-]?control\b
+\bmiss(ing|es|ed)?.{0,30}role[\s\-]?check\b
+\bpermission[\s\-]?(not[\s\-]?verified|unverified)\b
+\bendpoint[\s\-](is not |un)protected|(un)?protected[\s\-]?endpoint\b
+\bno[\s\-]?acl\b
+\bopen[\s\-]?endpoint\b
+\bmiss(ing|es|ed)?.{0,30}policy[\s\-]?check\b
+\buser[\s\-]?rights[\s\-]?not[\s\-]?checked\b
+\bauthoriz.*\b
+\bpermission\b

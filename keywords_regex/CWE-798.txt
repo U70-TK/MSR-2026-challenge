@@ -1,12 +1,12 @@
 -> CWE-798 Use of Hard-Coded Credentials
-.*\bhard[\s\-]?coded[\s\-]?(credential.*|sensitive.*)\b.*
-.*\bhard[\s\-]?coded[\s\-]?(password|key|secret|token)\b.*
-.*\bcredential[\s\-]?in[\s\-]?code\b.*
-.*\bpassword[\s\-]?literal\b.*
-.*\bapi[\s\-]?key[\s\-]?in[\s\-]?source\b.*
-.*\bsecret[\s\-]?in[\s\-]?config\b.*
-.*\bembedded[\s\-]?password\b.*
-.*\bdefault[\s\-]?credential.*\b.*
-.*\bplaintext[\s\-]?password\b.*
-.*\bpassword[\s\-]?expos.*\b.*
-.*\bauth.*\b.*
+\bhard[\s\-]?coded[\s\-]?(credential.*|sensitive.*)\b
+\bhard[\s\-]?coded[\s\-]?(password|key|secret|token)\b
+\bcredential[\s\-]?in[\s\-]?code\b
+\bpassword[\s\-]?literal\b
+\bapi[\s\-]?key[\s\-]?in[\s\-]?source\b
+\bsecret[\s\-]?in[\s\-]?config\b
+\bembedded[\s\-]?password\b
+\bdefault[\s\-]?credential.*\b
+\bplaintext[\s\-]?password\b
+\bpassword[\s\-]?expos.*\b
+\bauth.*\b

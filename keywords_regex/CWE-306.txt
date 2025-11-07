@@ -1,11 +1,11 @@
 -> CWE-306 Missing Authentication for Critical Function
-.*\bmissing[\s\-]?authentication[\s\-]?for[\s\-]?critical[\s\-]?function\b.*
-.*\bcritical[\s\-]?endpoint[\s\-]?unprotected\b.*
-.*\bno[\s\-]?auth[\s\-]?check\b.*
-.*\bunauthenticated[\s\-]?admin[\s\-]?action\b.*
-.*\bopen[\s\-]?admin[\s\-]?api\b.*
-.*\bunsafe[\s\-]?endpoint\b.*
-.*\bpublic[\s\-]?function[\s\-]?exposed\b.*
-.*\badmin[\s\-]?bypass\b.*
-.*\bunauthenticated[\s\-]?function\b.*
-.*\bcritical[\s\-]?operation[\s\-]?no[\s\-]?auth\b.*
+\bmissing[\s\-]?authentication[\s\-]?for[\s\-]?critical[\s\-]?function\b
+\bcritical[\s\-]?endpoint[\s\-]?unprotected\b
+\bno[\s\-]?auth[\s\-]?check\b
+\bunauthenticated[\s\-]?admin[\s\-]?action\b
+\bopen[\s\-]?admin[\s\-]?api\b
+\bunsafe[\s\-]?endpoint\b
+\bpublic[\s\-]?function[\s\-]?exposed\b
+\badmin[\s\-]?bypass\b
+\bunauthenticated[\s\-]?function\b
+\bcritical[\s\-]?operation[\s\-]?no[\s\-]?auth\b
