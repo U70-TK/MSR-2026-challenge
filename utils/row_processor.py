@@ -6,6 +6,10 @@ class RowProcessors:
     @staticmethod
     def process_pr_description(args):
         row, compiled_regex_lst = args
+
+        if pd.isna(row.get("merged_at", "")):
+            return None, None
+
         body = str(row.get("body", "")) if pd.notna(row.get("body", "")) else ""
         local_counts = Counter()
         matched_id = None
@@ -20,6 +24,10 @@ class RowProcessors:
     @staticmethod
     def process_pr_title(args):
         row, compiled_regex_lst = args
+
+        if pd.isna(row.get("merged_at", "")):
+            return None, None
+
         title = str(row.get("title", "")) if pd.notna(row.get("title", "")) else ""
         local_counts = Counter()
         matched_pr_id = None

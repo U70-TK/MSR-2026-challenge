@@ -1,25 +1,11 @@
 -> CWE-20 Improper Input Validation
-\b(improper|missing|unsafe)[\s\-]?neutralization\b
 \bcross[\s\-]?site[\s\-]?scripting\b
 \bxss\b
 \bxss[\s\-]?vulnerab.*\b
 \bscript[\s\-]?inject.*\b
 \bhtml[\s\-]?inject.*\b
 \bjs[\s\-]?inject.*\b
-\bscript[\s\-]?tag.*\b
-\bescaped[\s\-]?output\b
-\bmissing[\s\-]?escape.*\b
-\bencode[\s\-]?output\b
 \bunsafe[\s\-]?render.*\b
 \bmalicious[\s\-]?script\b
 \bdom[\s\-]?xss\b
 \breflected[\s\-]?xss\b
-\bstored[\s\-]?xss\b
-\bescape[\s\-]?html\b
-\bsanitiz.*\b
-\bencode.*\b
-\bdecode.*\b
-\bescape.*\b
-\bhtml.*\b
-\bscript.*\b
-\bjavascript.*\b

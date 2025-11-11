@@ -3,13 +3,8 @@
 \bremote[\s\-]?code[\s\-]?execution\b
 \brce\b
 \bcommand[\s\-]?inject.*\b
-\beval\b
-\bexec\b
-\bcompile\b
-\bdeserialize[\s\-]?execute\b
 \btemplate[\s\-]?inject.*\b
 \bexpression[\s\-]?inject.*\b
 \bexecute[\s\-]?arbitrary[\s\-]?code\b
-\bimproper[\s\-]?neutralization[\s\-]?of[\s\-]?code\b
 \bunsafe[\s\-]?dynamic[\s\-]?execution\b
 \bruntime[\s\-]?eval\b

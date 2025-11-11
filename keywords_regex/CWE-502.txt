@@ -6,11 +6,4 @@
 \bunsafe[\s\-]?deserialization\b
 \buntrusted[\s\-]?object[\s\-]?stream\b
 \bjava[\s\-]?serialization\b
-\bpickle[\s\-]?load\b
-\bmarshal\.load\b
-\bunmarshal\b
-\bxml[\s\-]?deserialization\b
-\bphp[\s\-]?unserialize\b
-\byaml[\s\-]?load\b
 \bunsafe[\s\-]?unmarshal\b
-\bobject[\s\-]?stream\b

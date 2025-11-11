@@ -5,15 +5,3 @@
 \boverwrite[\s\-]?memory\b
 \bmemory[\s\-]?corrupt.*\b
 \bsegmentation[\s\-]?fault\b
-\bmemmove\b
-\bstrcat\b
-\bmemset\b
-\bmalloc\b
-\bfree\b
-\bpointer.*\b
-\boverflow.*\b
-\bwrite.*memory.*\b
-\bheap.*\b
-\bstack.*\b
-segfault
-\bboundary\b

@@ -5,10 +5,6 @@
 \bdangling[\s\-]?pointer\b
 \breuse[\s\-]?freed[\s\-]?memory\b
 \bheap[\s\-]?corruption\b
-\bmemory[\s\-]?reuse\b
-\baccess[\s\-]?after[\s\-]?deallocate\b
 \bdelete[\s\-]?then[\s\-]?use\b
-\bpointer[\s\-]?lifetime\b
 \bfreed[\s\-]?object\b
 \binvalid[\s\-]?reference\b
-\bheap[\s\-]?bug\b

@@ -2,7 +2,6 @@
 \bimproper.{0,30}authentication\b
 \bweak.{0,30}authentication\b
 \bmissing.{0,30}authentication\b
-\bnot?.{0,30}auth(enticated|orized|entication|orization)?\b
 \bunauthenticated.{0,30}access\b
 \btoken.{0,30}not.{0,30}verified\b
 \binvalid[\s\-]?token\b
@@ -14,8 +13,3 @@
 \bimproper[\s\-]?credential[\s\-]?use\b
 \bweak[\s\-]?login\b
 \bunauthenticated\b
-\blogin\b
-\blogged[\s\-]?in\b
-\bsession\b
-\bcredential\b
-\btoken\b

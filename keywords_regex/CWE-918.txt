@@ -5,7 +5,5 @@
 \bunsafe[\s\-]?url[\s\-]?fetch\b
 \buser[\s\-]?input[\s\-]?as[\s\-]?url\b
 \bopen[\s\-]?redirect[\s\-]?to[\s\-]?internal\b
-\bimproper[\s\-]?url[\s\-]?validation\b
-\bmetadata[\s\-]?service[\s\-]?access\b
 \brequest[\s\-]?smuggling\b
 \bunsafe[\s\-]?http[\s\-]?client\b

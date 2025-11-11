@@ -2,17 +2,7 @@
 \bos[\s\-]?command[\s\-]?inject.*\b
 \bcommand[\s\-]?execution\b
 \bimproper[\s\-]?neutralization[\s\-]?of[\s\-]?os[\s\-]?command\b
-\bsystem\([^)]*\)*
-\bexec\([^)]*\)*
-\bpopen\b
-\bspawn\b
 \bruntime\.exec\b
-\bsubprocess\b
-\bshell\b
-\bshellcmd\b
-\bunsafe[\s\-]?command\b
 \buser[\s\-]?input[\s\-]?in[\s\-]?shell\b
-\bmissing[\s\-]?escaping\b
 \bunsanitized[\s\-]?command\b
-\bvalidate[\s\-]?command[\s\-]?argument\b
 \bcli[\s\-]?injection\b

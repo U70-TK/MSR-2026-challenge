@@ -8,7 +8,4 @@
 \belevate[sd]?.{0,30}privilege\b
 \bdrop(s|ped)?.{0,30}privilege\b
 \broot[\s\-]?(access|privilege)\b
-\bsudo\b
-\badmin\b
 \bsystem[\s\-]?(access|privilege)\b
-\buser[\s\-]?rights\b

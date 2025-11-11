@@ -2,14 +2,3 @@
 \bdom[\s\-]?based[\s\-]?xss\b
 \bscript[\s\-]?injection\b
 xss
-cross.*site
-script
-javascript
-html
-encode
-reflect
-stored
-dom
-<script
-onerror
-onload

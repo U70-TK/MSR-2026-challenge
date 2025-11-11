@@ -2,14 +2,11 @@
 \bcsrf\b
 \bcross[\s\-]?site[\s\-]?request[\s\-]?forgery\b
 \brequest[\s\-]?forgery\b
-\btoken[\s\-]?missing\b
 \bmissing[\s\-]?csrf[\s\-]?token\b
 \bimproper[\s\-]?token[\s\-]?validation\b
 \bno[\s\-]?anti[\s\-]?forgery\b
 \bmissing[\s\-]?authenticity[\s\-]?token\b
-\bvalidate[\s\-]?token\b
 \bunsafe[\s\-]?post[\s\-]?request\b
 \bunauthenticated[\s\-]?state[\s\-]?change\b
 \breferrer[\s\-]?forgery\b
 \bcross[\s\-]?domain[\s\-]?request\b
-\bdouble[\s\-]?submit[\s\-]?cookie\b

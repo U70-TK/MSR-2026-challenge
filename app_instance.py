@@ -11,6 +11,7 @@ from multiprocessing import Pool, cpu_count, current_process
 from collections import Counter
 from typing import List
 from utils.row_processor import RowProcessors
+import numpy as np
 
 class AppInstance():
     def __init__(self, output_dir, huggingface_repo: str, keyword_dir: str, log_file_path:str, logger_id: str=datetime.now().strftime("%Y-%m-%d-%H:%M:%S")):
@@ -151,7 +152,7 @@ class AppInstance():
 
         return matched_ids
     
-    def match_pr_commits(self):
+    def match_pr_commits(self, save_result=True):
 
         matched_ids = self.match_dataframe_return_id(
             matching_func=RowProcessors.process_pr_commit_message,
@@ -164,13 +165,16 @@ class AppInstance():
             columns=["matched_pr_ids"]
         )
 
-        self._save_file_with_extension(
-            matched_ids_df, 
-            f"pr_commit_msg_description",
-            extension="parquet"
-        )
+        if save_result:
+            self._save_file_with_extension(
+                matched_ids_df, 
+                f"pr_commit_msg_description",
+                extension="parquet"
+            )
+        else:
+            return matched_ids_df
 
-    def match_human_pr_description(self):
+    def match_human_pr_description(self, save_result=True):
         matched_ids = self.match_dataframe_return_id(
             matching_func=RowProcessors.process_pr_description,
             subset_name=AIDev.HUMAN_PULL_REQUEST,
@@ -182,13 +186,16 @@ class AppInstance():
             columns=["matched_pr_ids"]
         )
 
-        self._save_file_with_extension(
-            matched_ids_df, 
-            f"human_pr_description",
-            extension="parquet"
-        )
+        if save_result:
+            self._save_file_with_extension(
+                matched_ids_df, 
+                f"human_pr_description",
+                extension="parquet"
+            )
+        else:
+            return matched_ids_df
 
-    def match_pr_description(self):
+    def match_pr_description(self, save_result=True):
         matched_ids = self.match_dataframe_return_id(
             matching_func=RowProcessors.process_pr_description,
             subset_name=AIDev.ALL_PULL_REQUEST,
@@ -200,13 +207,16 @@ class AppInstance():
             columns=["matched_pr_ids"]
         )
 
-        self._save_file_with_extension(
-            matched_ids_df, 
-            f"pr_description",
-            extension="parquet"
-        )
+        if save_result:
+            self._save_file_with_extension(
+                matched_ids_df, 
+                f"pr_description",
+                extension="parquet"
+            )
+        else:
+            return matched_ids_df
 
-    def match_pr_title(self):
+    def match_pr_title(self, save_result=True):
         matched_ids = self.match_dataframe_return_id(
             matching_func=RowProcessors.process_pr_title,
             subset_name=AIDev.ALL_PULL_REQUEST,
@@ -218,13 +228,16 @@ class AppInstance():
             columns=["matched_pr_ids"]
         )
 
-        self._save_file_with_extension(
-            matched_ids_df, 
-            f"pr_title",
-            extension="parquet"
-        )
+        if save_result:
+            self._save_file_with_extension(
+                matched_ids_df, 
+                f"pr_title",
+                extension="parquet"
+            )
+        else:
+            return matched_ids_df
 
-    def match_human_pr_title(self):
+    def match_human_pr_title(self, save_result=True):
         matched_ids = self.match_dataframe_return_id(
             matching_func=RowProcessors.process_pr_title,
             subset_name=AIDev.HUMAN_PULL_REQUEST,
@@ -236,8 +249,33 @@ class AppInstance():
             columns=["matched_pr_ids"]
         )
 
+        if save_result:
+            self._save_file_with_extension(
+                matched_ids_df, 
+                f"human_pr_title",
+                extension="parquet"
+            )
+        else:
+            return matched_ids_df
+    
+    def match_llm_pr_desciption_title_merge(self):
+        pr_desciption_ids:pd.DataFrame = self.match_pr_description(save_result=False)
+        pr_title_matching_ids:pd.DataFrame = self.match_pr_title(save_result=False)
+
+        pr_description_id_lst = pr_desciption_ids["matched_pr_ids"].to_numpy()
+        pr_title_matching_id_lst = pr_title_matching_ids["matched_pr_ids"].to_numpy()
+
+        pr_combined_lst = np.union1d(pr_description_id_lst, pr_title_matching_id_lst)
+        
+        self.logger.info(f"Total keyword extraction result length: {len(pr_combined_lst)}")
+
+        pr_combined_ids_df = pd.DataFrame(
+            pr_combined_lst,
+            columns=["matched_pr_ids"]
+        )
+
         self._save_file_with_extension(
-            matched_ids_df, 
-            f"human_pr_title",
+            pr_combined_ids_df, 
+            f"pr_desc_title_combined",
             extension="parquet"
         )

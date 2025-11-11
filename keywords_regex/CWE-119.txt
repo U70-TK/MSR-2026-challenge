@@ -4,11 +4,4 @@
 \bbuffer[\s\-]?(overflow|underflow|corrupt(s|ed|ion)?)\b
 \bheap[\s\-]?(overflow|underflow|corrupt(s|ed|ion)?)\b
 \bstack[\s\-]?(overflow|underflow|corrupt(s|ed|ion)?)\b
-\bindex[\s\-]?out[\s\-]?of[\s\-]?bounds\b
-\bimproper[\s\-]?buffer[\s\-]?use\b
 \bunsafe[\s\-]?memory[\s\-]?access\b
-\bpointer[\s\-]?arithmetic\b
-\binvalid[\s\-]?offset\b
-\bbuffer\b
-\bmemcpy\b
-\bstrcpy\b

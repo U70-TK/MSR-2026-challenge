@@ -9,4 +9,3 @@
 \bdefault[\s\-]?credential.*\b
 \bplaintext[\s\-]?password\b
 \bpassword[\s\-]?expos.*\b
-\bauth.*\b

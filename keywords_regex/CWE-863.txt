@@ -4,7 +4,6 @@
 \bflawed.{0,30}authorization\b
 \b(wrong|incorrect).{0,30}permission.{0,30}(check|grant)\b
 \brole.{0,30}bypass\b
-\baccess[\s\-]?control\b
 \bauthorization.{0,30}failure\b
 \bmissing.{0,30}role.{0,30}verification\b
 \bincorrect.{0,30}role.{0,30}assignment\b
