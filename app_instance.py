@@ -12,6 +12,7 @@ from collections import Counter
 from typing import List
 from utils.row_processor import RowProcessors
 from data_analysis.lang_determiner import LangDeterminer
+from data_analysis.cwe_determiner import CWEDeterminer
 import numpy as np
 
 class AppInstance():
@@ -325,3 +326,13 @@ class AppInstance():
         human_pull_request = self._load_table_with_name(AIDev.HUMAN_PULL_REQUEST)
         self.lang_determiner.set_lang_determiner_data(data=human_pull_request,table_name=AIDev.HUMAN_PULL_REQUEST)
         self.lang_determiner.determine_lang()
+
+    def determine_cwe_human_pr(self):
+        human_pr_with_diffs = pd.read_parquet("./output/human_pr_with_diffs.parquet")
+        cwe_determiner = CWEDeterminer(
+            table_name=AIDev.HUMAN_PULL_REQUEST, 
+            df=human_pr_with_diffs,
+            logger=self.logger,
+            data_writer=self.data_writer
+        )
+        cwe_determiner.run_llm_for_dataframe()

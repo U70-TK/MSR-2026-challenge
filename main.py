@@ -20,7 +20,8 @@ def main():
 
     # app.match_llm_pr_desciption_title_merge()
     # app.detect_pr_description_lang()
-    app.match_human_pr_description_title_merge()
+    # app.match_human_pr_description_title_merge()
+    app.determine_cwe_human_pr()
     
 if __name__ == '__main__':
     main()

@@ -33,3 +33,9 @@ class DF_writer:
         output_path = self._get_timestamped_path(prefix, "xlsx")
         df.to_excel(output_path, index=False)
         return output_path
+    
+    def write_records_parquet(self, records: list[dict], prefix: str = "output") -> str:
+        if not records:
+            return None
+        df = pd.DataFrame(records)
+        return self.save_parquet(df, prefix)
