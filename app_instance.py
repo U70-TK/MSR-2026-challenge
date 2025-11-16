@@ -11,6 +11,7 @@ from multiprocessing import Pool, cpu_count, current_process
 from collections import Counter
 from typing import List
 from utils.row_processor import RowProcessors
+from data_analysis.lang_determiner import LangDeterminer
 import numpy as np
 
 class AppInstance():
@@ -22,6 +23,7 @@ class AppInstance():
         self._keyword_loader: Keyword_loader | None = None
         self._dataset_loader: Data_loader | None = None
         self._data_writer: DF_writer | None = None
+        self._lang_determiner: LangDeterminer | None = None
         self.logger_id = logger_id
         self.keyword_dir = keyword_dir
 
@@ -75,6 +77,18 @@ class AppInstance():
         )
         self._dataset_loader = dataset_loader
         return self._dataset_loader
+    
+    @property
+    def lang_determiner(self):
+        if self._lang_determiner is not None:
+            return self._lang_determiner
+        lang_determiner = LangDeterminer(
+            df_writer=self.data_writer,
+            logger=self.logger,
+            output_dir=self.output_dir
+        )
+        self._lang_determiner = lang_determiner
+        return self._lang_determiner
 
     def _load_table_with_name(self, table_name):
         if hasattr(table_name, "value"):
@@ -279,3 +293,35 @@ class AppInstance():
             f"pr_desc_title_combined",
             extension="parquet"
         )
+    
+    def match_human_pr_description_title_merge(self):
+        human_pr_description_ids: pd.DataFrame = self.match_human_pr_description(save_result=False)
+        human_pr_title_matching_ids: pd.DataFrame = self.match_human_pr_title(save_result=False)
+
+        human_pr_description_id_lst = human_pr_description_ids["matched_pr_ids"].to_numpy()
+        human_pr_title_matching_id_lst = human_pr_title_matching_ids["matched_pr_ids"].to_numpy()
+
+        human_pr_combined_lst = np.union1d(human_pr_description_id_lst, human_pr_title_matching_id_lst)
+
+        self.logger.info(f"Human total keyword extraction result length: {len(human_pr_combined_lst)}")
+
+        human_pr_combined_ids_df = pd.DataFrame(
+            human_pr_combined_lst,
+            columns=["matched_pr_ids"]
+        )
+
+        self._save_file_with_extension(
+            human_pr_combined_ids_df, 
+            f"human_pr_desc_title_combined",
+            extension="parquet"
+        )
+    
+    def detect_pr_description_lang(self):
+        all_pull_request = self._load_table_with_name(AIDev.ALL_PULL_REQUEST)
+        self.lang_determiner.set_lang_determiner_data(data=all_pull_request,table_name=AIDev.ALL_PULL_REQUEST)
+        self.lang_determiner.determine_lang()
+
+    def detect_human_pr_description_lang(self):
+        human_pull_request = self._load_table_with_name(AIDev.HUMAN_PULL_REQUEST)
+        self.lang_determiner.set_lang_determiner_data(data=human_pull_request,table_name=AIDev.HUMAN_PULL_REQUEST)
+        self.lang_determiner.determine_lang()

@@ -18,8 +18,9 @@ def main():
         logger_id=datetime.now(utc_minus_4).strftime('%Y-%m-%d-%H:%M:%S')
     )
 
-    app.match_llm_pr_desciption_title_merge()
+    # app.match_llm_pr_desciption_title_merge()
+    # app.detect_pr_description_lang()
+    app.match_human_pr_description_title_merge()
     
-
 if __name__ == '__main__':
     main()

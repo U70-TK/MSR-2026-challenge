@@ -6,6 +6,10 @@ __pycache__/
 output/
 *.parquet
 
+lid.176.bin
+
+/log
+
 # C extensions
 *.so
 
