@@ -1,0 +1,1107 @@
+2025-11-19 03:29:23,756 - 2025-11-18-23:29:22 - INFO - Starting CWE classification on 187 rows.
+2025-11-19 03:29:35,746 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:29:35,748 - 2025-11-18-23:29:22 - INFO - Current length of results: 1
+2025-11-19 03:29:40,487 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:29:40,487 - 2025-11-18-23:29:22 - INFO - Current length of results: 2
+2025-11-19 03:29:41,662 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 576815 (>= 30000)
+2025-11-19 03:29:41,673 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:29:41,673 - 2025-11-18-23:29:22 - INFO - Current length of results: 3
+2025-11-19 03:29:49,859 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:29:49,859 - 2025-11-18-23:29:22 - INFO - Current length of results: 4
+2025-11-19 03:29:54,116 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:29:54,116 - 2025-11-18-23:29:22 - INFO - Current length of results: 5
+2025-11-19 03:30:00,615 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:30:00,615 - 2025-11-18-23:29:22 - INFO - Current length of results: 6
+2025-11-19 03:30:05,832 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:30:05,832 - 2025-11-18-23:29:22 - INFO - Current length of results: 7
+2025-11-19 03:30:09,528 - 2025-11-18-23:29:22 - ERROR - Error in tool 'get_file_diff' with args {'filename': 'src/Microsoft.DotNet.Build.Tasks.Feed/src/model/SetupTargetFeedConfigBase.cs', 'line_end': 400, 'line_start': 200}: TypeError("CWEDeterminer._llm_security_classify_with_tools.<locals>.get_file_diff() got an unexpected keyword argument 'line_end'")
+2025-11-19 03:30:10,847 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:30:10,847 - 2025-11-18-23:29:22 - INFO - Current length of results: 8
+2025-11-19 03:30:15,091 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:30:15,091 - 2025-11-18-23:29:22 - INFO - Current length of results: 9
+2025-11-19 03:30:38,723 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":22,"cwe_title":"Path Traversal"},{"cwe_id":78,"cwe_title":"OS Command Injection"}]}
+2025-11-19 03:30:38,724 - 2025-11-18-23:29:22 - INFO - Current length of results: 10
+2025-11-19 03:30:48,080 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":20,"cwe_title":"Improper Input Validation"}]}
+2025-11-19 03:30:48,080 - 2025-11-18-23:29:22 - INFO - Current length of results: 11
+2025-11-19 03:30:52,262 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:30:52,262 - 2025-11-18-23:29:22 - INFO - Current length of results: 12
+2025-11-19 03:31:00,874 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":1395,"cwe_title":"Dependency on Vulnerable Third-Party Component"}]}
+2025-11-19 03:31:00,874 - 2025-11-18-23:29:22 - INFO - Current length of results: 13
+2025-11-19 03:31:15,464 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:31:15,464 - 2025-11-18-23:29:22 - INFO - Current length of results: 14
+2025-11-19 03:31:19,217 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:31:19,217 - 2025-11-18-23:29:22 - INFO - Current length of results: 15
+2025-11-19 03:31:47,508 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 119,
+      "cwe_title": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+    },
+    {
+      "cwe_id": 121,
+      "cwe_title": "Stack-based Buffer Overflow"
+    }
+  ]
+}
+2025-11-19 03:31:47,510 - 2025-11-18-23:29:22 - INFO - Current length of results: 16
+2025-11-19 03:31:52,944 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:31:52,944 - 2025-11-18-23:29:22 - INFO - Current length of results: 17
+2025-11-19 03:32:05,600 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1395,
+      "cwe_title": "Dependency on Vulnerable Third-Party Component"
+    }
+  ]
+}
+2025-11-19 03:32:05,601 - 2025-11-18-23:29:22 - INFO - Current length of results: 18
+2025-11-19 03:32:23,472 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "file_path": ".github/workflows/ci.yml",
+  "start_line": 1,
+  "added_line_count": 5,
+  "deleted_line_count": 5,
+  "diff": "@@ -3,7 +3,7 @@\n   name: CI\n   on:\n     push:\n       branches: [ main ]\n     pull_request:\n-      branches: [ main ]\n-    paths:\n-      - '**/*.go'\n-      - '**/go.mod'\n-      - '**/go.sum'\n+      branches: [ main ]\n+    paths:\n+      - '**/*.go'\n+      - '**/go.mod'\n+      - '**/go.sum'\n   jobs:\n@@\n         uses: actions/checkout@v3\n-        with:\n- 
+2025-11-19 03:32:23,472 - 2025-11-18-23:29:22 - WARNING - JSON validation failed, attempting regex fallback.
+2025-11-19 03:32:23,475 - 2025-11-18-23:29:22 - INFO - Current length of results: 19
+2025-11-19 03:32:38,355 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1395,
+      "cwe_title": "Dependency on Vulnerable Third-Party Component"
+    }
+  ]
+}
+2025-11-19 03:32:38,356 - 2025-11-18-23:29:22 - INFO - Current length of results: 20
+2025-11-19 03:32:45,319 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1104,
+      "cwe_title": "Use of Unmaintained Third Party Components"
+    }
+  ]
+}
+2025-11-19 03:32:45,319 - 2025-11-18-23:29:22 - INFO - Current length of results: 21
+2025-11-19 03:33:01,103 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1104,
+      "cwe_title": "Use of Unmaintained Third Party Components"
+    }
+  ]
+}
+2025-11-19 03:33:01,103 - 2025-11-18-23:29:22 - INFO - Current length of results: 22
+2025-11-19 03:33:19,793 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":185,"cwe_title":"Incorrect Regular Expression"}]}
+2025-11-19 03:33:19,793 - 2025-11-18-23:29:22 - INFO - Current length of results: 23
+2025-11-19 03:33:29,682 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): **Security‑Patch Classification:** No  
+**CWE(s) Affected:** []   (no security‑related changes detected)
+2025-11-19 03:33:29,682 - 2025-11-18-23:29:22 - WARNING - JSON validation failed, attempting regex fallback.
+2025-11-19 03:33:29,683 - 2025-11-18-23:29:22 - INFO - Current length of results: 24
+2025-11-19 03:33:40,461 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    },
+    {
+      "cwe_id": 22,
+      "cwe_title": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    }
+  ]
+}
+2025-11-19 03:33:40,461 - 2025-11-18-23:29:22 - INFO - Current length of results: 25
+2025-11-19 03:33:55,012 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 119,
+      "cwe_title": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+    },
+    {
+      "cwe_id": 190,
+      "cwe_title": "Integer Overflow or Wraparound"
+    }
+  ]
+}
+2025-11-19 03:33:55,012 - 2025-11-18-23:29:22 - INFO - Current length of results: 26
+2025-11-19 03:34:03,263 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:34:03,263 - 2025-11-18-23:29:22 - INFO - Current length of results: 27
+2025-11-19 03:34:12,775 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): **Updated `webpack-dev-server` Dependency**
+
+The change upgrades the `webpack-dev-server` package from version **5.1.0** to **5.2.1** across the project’s client‑side packages. This brings the latest security fixes and bug resolutions, including:
+
+- Blocking cross‑origin requests unless explicitly allowed.
+- Preventing overlay errors from React error boundaries.
+- Correcting network interface selection behavior.
+
+**Key Points of the Update**
+- Ensures compliance with recent security standards.
+-
+2025-11-19 03:34:12,775 - 2025-11-18-23:29:22 - WARNING - JSON validation failed, attempting regex fallback.
+2025-11-19 03:34:12,775 - 2025-11-18-23:29:22 - INFO - Current length of results: 28
+2025-11-19 03:34:18,797 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:34:18,797 - 2025-11-18-23:29:22 - INFO - Current length of results: 29
+2025-11-19 03:34:23,498 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:34:23,498 - 2025-11-18-23:29:22 - INFO - Current length of results: 30
+2025-11-19 03:34:26,942 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:34:26,942 - 2025-11-18-23:29:22 - INFO - Current length of results: 31
+2025-11-19 03:34:32,033 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:34:32,033 - 2025-11-18-23:29:22 - INFO - Current length of results: 32
+2025-11-19 03:34:32,193 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 58635 (>= 30000)
+2025-11-19 03:34:32,194 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:34:32,194 - 2025-11-18-23:29:22 - INFO - Current length of results: 33
+2025-11-19 03:34:38,146 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:34:38,147 - 2025-11-18-23:29:22 - INFO - Current length of results: 34
+2025-11-19 03:34:58,233 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 78,
+      "cwe_title": "OS Command Injection"
+    },
+    {
+      "cwe_id": 116,
+      "cwe_title": "Improper Encoding or Escaping of Output"
+    }
+  ]
+}
+2025-11-19 03:34:58,233 - 2025-11-18-23:29:22 - INFO - Current length of results: 35
+2025-11-19 03:35:08,730 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 284,
+      "cwe_title": "Improper Access Control"
+    }
+  ]
+}
+2025-11-19 03:35:08,730 - 2025-11-18-23:29:22 - INFO - Current length of results: 36
+2025-11-19 03:35:13,606 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:35:13,606 - 2025-11-18-23:29:22 - INFO - Current length of results: 37
+2025-11-19 03:35:13,737 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 65913 (>= 30000)
+2025-11-19 03:35:13,738 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:35:13,738 - 2025-11-18-23:29:22 - INFO - Current length of results: 38
+2025-11-19 03:35:18,179 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:35:18,179 - 2025-11-18-23:29:22 - INFO - Current length of results: 39
+2025-11-19 03:35:22,385 - 2025-11-18-23:29:22 - ERROR - Error in tool 'get_file_diff' with args {'filename': 'a/packages/kit/src/views/Staking/components/UniversalStake/index.tsx', 'line_end': 400, 'line_start': 200}: TypeError("CWEDeterminer._llm_security_classify_with_tools.<locals>.get_file_diff() got an unexpected keyword argument 'line_end'")
+2025-11-19 03:35:28,663 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    }
+  ]
+}
+2025-11-19 03:35:28,663 - 2025-11-18-23:29:22 - INFO - Current length of results: 40
+2025-11-19 03:35:31,810 - 2025-11-18-23:29:22 - ERROR - Error in tool 'get_file_diff' with args {'filename': 'packages/kit-bg/src/providers/ProviderApiPolkadot.ts', 'line_end': 400, 'line_start': 200}: TypeError("CWEDeterminer._llm_security_classify_with_tools.<locals>.get_file_diff() got an unexpected keyword argument 'line_end'")
+2025-11-19 03:35:40,055 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    },
+    {
+      "cwe_id": 285,
+      "cwe_title": "Improper Authorization"
+    }
+  ]
+}
+2025-11-19 03:35:40,055 - 2025-11-18-23:29:22 - INFO - Current length of results: 41
+2025-11-19 03:35:45,996 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:35:45,996 - 2025-11-18-23:29:22 - INFO - Current length of results: 42
+2025-11-19 03:35:47,025 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 559749 (>= 30000)
+2025-11-19 03:35:47,036 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:35:47,037 - 2025-11-18-23:29:22 - INFO - Current length of results: 43
+2025-11-19 03:35:51,382 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:35:51,382 - 2025-11-18-23:29:22 - INFO - Current length of results: 44
+2025-11-19 03:35:55,227 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:35:55,227 - 2025-11-18-23:29:22 - INFO - Current length of results: 45
+2025-11-19 03:35:55,294 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 30270 (>= 30000)
+2025-11-19 03:35:55,294 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:35:55,295 - 2025-11-18-23:29:22 - INFO - Current length of results: 46
+2025-11-19 03:36:03,888 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":20,"cwe_title":"Improper Input Validation"},{"cwe_id":770,"cwe_title":"Allocation of Resources Without Limits or Throttling"}]}
+2025-11-19 03:36:03,888 - 2025-11-18-23:29:22 - INFO - Current length of results: 47
+2025-11-19 03:36:09,450 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:36:09,450 - 2025-11-18-23:29:22 - INFO - Current length of results: 48
+2025-11-19 03:36:25,257 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 284,
+      "cwe_title": "Improper Access Control"
+    }
+  ]
+}
+2025-11-19 03:36:25,258 - 2025-11-18-23:29:22 - INFO - Current length of results: 49
+2025-11-19 03:36:25,369 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 58011 (>= 30000)
+2025-11-19 03:36:25,370 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:36:25,370 - 2025-11-18-23:29:22 - INFO - Current length of results: 50
+2025-11-19 03:36:35,978 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1333,
+      "cwe_title": "Inefficient Regular Expression Complexity"
+    },
+    {
+      "cwe_id": 400,
+      "cwe_title": "Uncontrolled Resource Consumption"
+    }
+  ]
+}
+2025-11-19 03:36:35,978 - 2025-11-18-23:29:22 - INFO - Current length of results: 51
+2025-11-19 03:36:47,580 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 125,
+      "cwe_title": "Out-of-bounds Read"
+    }
+  ]
+}
+2025-11-19 03:36:47,581 - 2025-11-18-23:29:22 - INFO - Current length of results: 52
+2025-11-19 03:36:52,550 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:36:52,550 - 2025-11-18-23:29:22 - INFO - Current length of results: 53
+2025-11-19 03:37:10,524 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 676,
+      "cwe_title": "Use of Potentially Dangerous Function"
+    },
+    {
+      "cwe_id": 284,
+      "cwe_title": "Improper Access Control"
+    }
+  ]
+}
+2025-11-19 03:37:10,524 - 2025-11-18-23:29:22 - INFO - Current length of results: 54
+2025-11-19 03:37:14,981 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:37:14,981 - 2025-11-18-23:29:22 - INFO - Current length of results: 55
+2025-11-19 03:37:20,842 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:20,842 - 2025-11-18-23:29:22 - INFO - Current length of results: 56
+2025-11-19 03:37:24,907 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:24,907 - 2025-11-18-23:29:22 - INFO - Current length of results: 57
+2025-11-19 03:37:28,400 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:28,400 - 2025-11-18-23:29:22 - INFO - Current length of results: 58
+2025-11-19 03:37:32,714 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:32,715 - 2025-11-18-23:29:22 - INFO - Current length of results: 59
+2025-11-19 03:37:37,057 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:37,057 - 2025-11-18-23:29:22 - INFO - Current length of results: 60
+2025-11-19 03:37:41,131 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:37:41,131 - 2025-11-18-23:29:22 - INFO - Current length of results: 61
+2025-11-19 03:37:41,194 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 41612 (>= 30000)
+2025-11-19 03:37:41,194 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:37:41,194 - 2025-11-18-23:29:22 - INFO - Current length of results: 62
+2025-11-19 03:37:45,802 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:37:45,802 - 2025-11-18-23:29:22 - INFO - Current length of results: 63
+2025-11-19 03:37:49,076 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:49,076 - 2025-11-18-23:29:22 - INFO - Current length of results: 64
+2025-11-19 03:37:52,088 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:52,088 - 2025-11-18-23:29:22 - INFO - Current length of results: 65
+2025-11-19 03:37:58,206 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:37:58,206 - 2025-11-18-23:29:22 - INFO - Current length of results: 66
+2025-11-19 03:38:04,384 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:38:04,384 - 2025-11-18-23:29:22 - INFO - Current length of results: 67
+2025-11-19 03:38:15,778 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":285,"cwe_title":"Improper Authorization"},{"cwe_id":863,"cwe_title":"Incorrect Authorization"}]}
+2025-11-19 03:38:15,779 - 2025-11-18-23:29:22 - INFO - Current length of results: 68
+2025-11-19 03:38:23,714 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 285,
+      "cwe_title": "Improper Authorization"
+    },
+    {
+      "cwe_id": 269,
+      "cwe_title": "Improper Privilege Management"
+    }
+  ]
+}
+2025-11-19 03:38:23,714 - 2025-11-18-23:29:22 - INFO - Current length of results: 69
+2025-11-19 03:38:28,564 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:38:28,564 - 2025-11-18-23:29:22 - INFO - Current length of results: 70
+2025-11-19 03:38:32,618 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:38:32,618 - 2025-11-18-23:29:22 - INFO - Current length of results: 71
+2025-11-19 03:38:38,333 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:38:38,333 - 2025-11-18-23:29:22 - INFO - Current length of results: 72
+2025-11-19 03:38:49,413 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 284,
+      "cwe_title": "Improper Access Control"
+    },
+    {
+      "cwe_id": 522,
+      "cwe_title": "Insufficiently Protected Credentials"
+    }
+  ]
+}
+2025-11-19 03:38:49,413 - 2025-11-18-23:29:22 - INFO - Current length of results: 73
+2025-11-19 03:39:05,036 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "isSecurityPatch": true,
+  "cweIds": [284, 306, 345]
+}
+2025-11-19 03:39:05,036 - 2025-11-18-23:29:22 - WARNING - JSON validation failed, attempting regex fallback.
+2025-11-19 03:39:05,036 - 2025-11-18-23:29:22 - INFO - Current length of results: 74
+2025-11-19 03:39:16,095 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 284,
+      "cwe_title": "Improper Access Control"
+    },
+    {
+      "cwe_id": 862,
+      "cwe_title": "Missing Authorization"
+    }
+  ]
+}
+2025-11-19 03:39:16,095 - 2025-11-18-23:29:22 - INFO - Current length of results: 75
+2025-11-19 03:39:23,283 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:39:23,283 - 2025-11-18-23:29:22 - INFO - Current length of results: 76
+2025-11-19 03:39:26,164 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:39:26,164 - 2025-11-18-23:29:22 - INFO - Current length of results: 77
+2025-11-19 03:39:32,121 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:39:32,121 - 2025-11-18-23:29:22 - INFO - Current length of results: 78
+2025-11-19 03:39:38,389 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:39:38,390 - 2025-11-18-23:29:22 - INFO - Current length of results: 79
+2025-11-19 03:39:44,450 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:39:44,450 - 2025-11-18-23:29:22 - INFO - Current length of results: 80
+2025-11-19 03:39:58,387 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":20,"cwe_title":"Improper Input Validation"},{"cwe_id":522,"cwe_title":"Insufficiently Protected Credentials"}]}
+2025-11-19 03:39:58,387 - 2025-11-18-23:29:22 - INFO - Current length of results: 81
+2025-11-19 03:40:16,685 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): **Update Next.js to 15.2.3 (security patch)**  
+
+- Bumped `next` from **15.2.2** to **15.2.3**, which includes the latest security fixes published by the Next.js team.  
+- Updated all related platform‑specific SWC binaries (`@next/swc-*`) to the matching 15.2.3 versions.  
+- Updated transitive dependencies that ship with Next.js:
+  - `caniuse-lite` → 1.0.30001707  
+  - `nanoid` → 3.3.11 (used by PostCSS)  
+  - `@emnapi/runtime` → 1.4.0 (used by sharp WASM builds)  
+- Adjusted lockfile entries fo
+2025-11-19 03:40:16,685 - 2025-11-18-23:29:22 - WARNING - JSON validation failed, attempting regex fallback.
+2025-11-19 03:40:16,685 - 2025-11-18-23:29:22 - INFO - Current length of results: 82
+2025-11-19 03:40:19,786 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:40:19,786 - 2025-11-18-23:29:22 - INFO - Current length of results: 83
+2025-11-19 03:40:24,172 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:40:24,172 - 2025-11-18-23:29:22 - INFO - Current length of results: 84
+2025-11-19 03:40:27,633 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:40:27,633 - 2025-11-18-23:29:22 - INFO - Current length of results: 85
+2025-11-19 03:40:35,616 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:40:35,616 - 2025-11-18-23:29:22 - INFO - Current length of results: 86
+2025-11-19 03:40:39,229 - 2025-11-18-23:29:22 - ERROR - Error in tool 'get_file_diff' with args {'cursor': 0, 'filename': 'frontend/trpc/routes/documents/index.ts'}: TypeError("CWEDeterminer._llm_security_classify_with_tools.<locals>.get_file_diff() got an unexpected keyword argument 'cursor'")
+2025-11-19 03:40:48,944 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 284,
+      "cwe_title": "Improper Access Control"
+    },
+    {
+      "cwe_id": 285,
+      "cwe_title": "Improper Authorization"
+    },
+    {
+      "cwe_id": 863,
+      "cwe_title": "Incorrect Authorization"
+    }
+  ]
+}
+2025-11-19 03:40:48,945 - 2025-11-18-23:29:22 - INFO - Current length of results: 87
+2025-11-19 03:40:56,042 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:40:56,042 - 2025-11-18-23:29:22 - INFO - Current length of results: 88
+2025-11-19 03:40:56,225 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 99099 (>= 30000)
+2025-11-19 03:40:56,226 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:40:56,226 - 2025-11-18-23:29:22 - INFO - Current length of results: 89
+2025-11-19 03:41:19,530 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 693,
+      "cwe_title": "Protection Mechanism Failure"
+    },
+    {
+      "cwe_id": 710,
+      "cwe_title": "Improper Adherence to Coding Standards"
+    }
+  ]
+}
+2025-11-19 03:41:19,530 - 2025-11-18-23:29:22 - INFO - Current length of results: 90
+2025-11-19 03:41:28,363 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:41:28,364 - 2025-11-18-23:29:22 - INFO - Current length of results: 91
+2025-11-19 03:41:34,704 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:41:34,704 - 2025-11-18-23:29:22 - INFO - Current length of results: 92
+2025-11-19 03:41:45,393 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "vulnerabilities_fixed": [],
+  "files_changed": [
+    {
+      "filename": "browser/package.json",
+      "diff": "=== CHUNK a/browser/package.json b/browser/package.json ===\n     \"sharp\": \"^0.34.1\",\n     \"tsx\": \"^4.19.2\",\n     \"typescript\": \"^5.8.3\",\n-    \"vitest\": \"^1.6.0\"\n+    \"vitest\": \"^3.2.2\"\n   }"
+    }
+  ]
+}
+2025-11-19 03:41:45,393 - 2025-11-18-23:29:22 - WARNING - JSON validation failed, attempting regex fallback.
+2025-11-19 03:41:45,394 - 2025-11-18-23:29:22 - INFO - Current length of results: 93
+2025-11-19 03:41:55,409 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 22,
+      "cwe_title": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    },
+    {
+      "cwe_id": 73,
+      "cwe_title": "External Control of File Name or Path"
+    }
+  ]
+}
+2025-11-19 03:41:55,410 - 2025-11-18-23:29:22 - INFO - Current length of results: 94
+2025-11-19 03:42:10,491 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 22,
+      "cwe_title": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    },
+    {
+      "cwe_id": 400,
+      "cwe_title": "Uncontrolled Resource Consumption"
+    }
+  ]
+}
+2025-11-19 03:42:10,491 - 2025-11-18-23:29:22 - INFO - Current length of results: 95
+2025-11-19 03:42:18,133 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":20,"cwe_title":"Improper Input Validation"}]}
+2025-11-19 03:42:18,133 - 2025-11-18-23:29:22 - INFO - Current length of results: 96
+2025-11-19 03:42:23,339 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:42:23,339 - 2025-11-18-23:29:22 - INFO - Current length of results: 97
+2025-11-19 03:42:29,321 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:42:29,321 - 2025-11-18-23:29:22 - INFO - Current length of results: 98
+2025-11-19 03:42:33,442 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:42:33,443 - 2025-11-18-23:29:22 - INFO - Current length of results: 99
+2025-11-19 03:42:38,335 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:42:38,335 - 2025-11-18-23:29:22 - INFO - Current length of results: 100
+2025-11-19 03:42:38,335 - 2025-11-18-23:29:22 - INFO - Writing Parquet chunk at dataframe index 599
+2025-11-19 03:42:56,250 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 94,
+      "cwe_title": "Improper Control of Generation of Code ('Code Injection')"
+    },
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    }
+  ]
+}
+2025-11-19 03:42:56,250 - 2025-11-18-23:29:22 - INFO - Current length of results: 1
+2025-11-19 03:42:56,331 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 46426 (>= 30000)
+2025-11-19 03:42:56,332 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:42:56,332 - 2025-11-18-23:29:22 - INFO - Current length of results: 2
+2025-11-19 03:43:00,148 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:43:00,148 - 2025-11-18-23:29:22 - INFO - Current length of results: 3
+2025-11-19 03:43:13,481 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":20,"cwe_title":"Improper Input Validation"}]}
+2025-11-19 03:43:13,481 - 2025-11-18-23:29:22 - INFO - Current length of results: 4
+2025-11-19 03:43:21,426 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:43:21,426 - 2025-11-18-23:29:22 - INFO - Current length of results: 5
+2025-11-19 03:43:24,662 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:43:24,662 - 2025-11-18-23:29:22 - INFO - Current length of results: 6
+2025-11-19 03:43:29,117 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:43:29,118 - 2025-11-18-23:29:22 - INFO - Current length of results: 7
+2025-11-19 03:43:41,105 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 79,
+      "cwe_title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    }
+  ]
+}
+2025-11-19 03:43:41,105 - 2025-11-18-23:29:22 - INFO - Current length of results: 8
+2025-11-19 03:43:45,981 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:43:45,981 - 2025-11-18-23:29:22 - INFO - Current length of results: 9
+2025-11-19 03:43:53,173 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:43:53,173 - 2025-11-18-23:29:22 - INFO - Current length of results: 10
+2025-11-19 03:43:53,259 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 34228 (>= 30000)
+2025-11-19 03:43:53,259 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:43:53,259 - 2025-11-18-23:29:22 - INFO - Current length of results: 11
+2025-11-19 03:43:59,452 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:43:59,452 - 2025-11-18-23:29:22 - INFO - Current length of results: 12
+2025-11-19 03:44:04,170 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:44:04,171 - 2025-11-18-23:29:22 - INFO - Current length of results: 13
+2025-11-19 03:44:17,621 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 79,
+      "cwe_title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    }
+  ]
+}
+2025-11-19 03:44:17,621 - 2025-11-18-23:29:22 - INFO - Current length of results: 14
+2025-11-19 03:44:37,746 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1395,
+      "cwe_title": "Dependency on Vulnerable Third-Party Component"
+    }
+  ]
+}
+2025-11-19 03:44:37,747 - 2025-11-18-23:29:22 - INFO - Current length of results: 15
+2025-11-19 03:44:42,544 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:44:42,544 - 2025-11-18-23:29:22 - INFO - Current length of results: 16
+2025-11-19 03:44:47,579 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:44:47,580 - 2025-11-18-23:29:22 - INFO - Current length of results: 17
+2025-11-19 03:44:52,842 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:44:52,842 - 2025-11-18-23:29:22 - INFO - Current length of results: 18
+2025-11-19 03:44:57,750 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:44:57,750 - 2025-11-18-23:29:22 - INFO - Current length of results: 19
+2025-11-19 03:45:13,863 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":1104,"cwe_title":"Use of Unmaintained Third Party Components"}]}
+2025-11-19 03:45:13,863 - 2025-11-18-23:29:22 - INFO - Current length of results: 20
+2025-11-19 03:45:20,149 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:45:20,149 - 2025-11-18-23:29:22 - INFO - Current length of results: 21
+2025-11-19 03:45:25,287 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:45:25,287 - 2025-11-18-23:29:22 - INFO - Current length of results: 22
+2025-11-19 03:45:38,383 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1104,
+      "cwe_title": "Use of Unmaintained Third Party Components"
+    }
+  ]
+}
+2025-11-19 03:45:38,383 - 2025-11-18-23:29:22 - INFO - Current length of results: 23
+2025-11-19 03:45:48,313 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 79,
+      "cwe_title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    }
+  ]
+}
+2025-11-19 03:45:48,313 - 2025-11-18-23:29:22 - INFO - Current length of results: 24
+2025-11-19 03:45:58,538 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 79,
+      "cwe_title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    }
+  ]
+}
+2025-11-19 03:45:58,538 - 2025-11-18-23:29:22 - INFO - Current length of results: 25
+2025-11-19 03:46:06,446 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:46:06,446 - 2025-11-18-23:29:22 - INFO - Current length of results: 26
+2025-11-19 03:46:06,585 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 87034 (>= 30000)
+2025-11-19 03:46:06,586 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:46:06,586 - 2025-11-18-23:29:22 - INFO - Current length of results: 27
+2025-11-19 03:46:17,186 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:46:17,186 - 2025-11-18-23:29:22 - INFO - Current length of results: 28
+2025-11-19 03:46:27,594 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 400,
+      "cwe_title": "Uncontrolled Resource Consumption"
+    }
+  ]
+}
+2025-11-19 03:46:27,594 - 2025-11-18-23:29:22 - INFO - Current length of results: 29
+2025-11-19 03:46:39,171 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 79,
+      "cwe_title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    }
+  ]
+}
+2025-11-19 03:46:39,171 - 2025-11-18-23:29:22 - INFO - Current length of results: 30
+2025-11-19 03:46:42,468 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:46:42,468 - 2025-11-18-23:29:22 - INFO - Current length of results: 31
+2025-11-19 03:46:53,636 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 22,
+      "cwe_title": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+    }
+  ]
+}
+2025-11-19 03:46:53,636 - 2025-11-18-23:29:22 - INFO - Current length of results: 32
+2025-11-19 03:46:58,939 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:46:58,939 - 2025-11-18-23:29:22 - INFO - Current length of results: 33
+2025-11-19 03:47:04,325 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:47:04,325 - 2025-11-18-23:29:22 - INFO - Current length of results: 34
+2025-11-19 03:47:09,768 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:47:09,768 - 2025-11-18-23:29:22 - INFO - Current length of results: 35
+2025-11-19 03:47:13,947 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:47:13,947 - 2025-11-18-23:29:22 - INFO - Current length of results: 36
+2025-11-19 03:47:24,216 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 400,
+      "cwe_title": "Uncontrolled Resource Consumption"
+    }
+  ]
+}
+2025-11-19 03:47:24,216 - 2025-11-18-23:29:22 - INFO - Current length of results: 37
+2025-11-19 03:47:28,329 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:47:28,329 - 2025-11-18-23:29:22 - INFO - Current length of results: 38
+2025-11-19 03:47:36,811 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 601,
+      "cwe_title": "URL Redirection to Untrusted Site ('Open Redirect')"
+    }
+  ]
+}
+2025-11-19 03:47:36,811 - 2025-11-18-23:29:22 - INFO - Current length of results: 39
+2025-11-19 03:47:40,440 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:47:40,440 - 2025-11-18-23:29:22 - INFO - Current length of results: 40
+2025-11-19 03:47:58,257 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): **No – this PR is not a security patch.**  
+
+The change only bumps the Rollup dependency from `4.39.0` to `4.40.1` (see the diff in `a/package-lock.json` where the version numbers and integrity hashes for all Rollup binaries are updated). The Rollup release notes for 4.40.1 list bug‑fixes (e.g., limiting hash size, avoiding top‑level‑await cycles, better entry‑chunk handling) but do not mention any security‑related fixes or CVE patches. Consequently, the PR is a routine dependency upgrade rather
+2025-11-19 03:47:58,257 - 2025-11-18-23:29:22 - WARNING - JSON validation failed, attempting regex fallback.
+2025-11-19 03:47:58,257 - 2025-11-18-23:29:22 - INFO - Current length of results: 41
+2025-11-19 03:48:07,814 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    },
+    {
+      "cwe_id": 1321,
+      "cwe_title": "Improperly Controlled Modification of Object Prototype Attributes"
+    }
+  ]
+}
+2025-11-19 03:48:07,814 - 2025-11-18-23:29:22 - INFO - Current length of results: 42
+2025-11-19 03:48:14,679 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:48:14,679 - 2025-11-18-23:29:22 - INFO - Current length of results: 43
+2025-11-19 03:48:22,312 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:48:22,312 - 2025-11-18-23:29:22 - INFO - Current length of results: 44
+2025-11-19 03:48:27,754 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:48:27,754 - 2025-11-18-23:29:22 - INFO - Current length of results: 45
+2025-11-19 03:48:31,772 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:48:31,772 - 2025-11-18-23:29:22 - INFO - Current length of results: 46
+2025-11-19 03:48:31,905 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 84561 (>= 30000)
+2025-11-19 03:48:31,906 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:48:31,906 - 2025-11-18-23:29:22 - INFO - Current length of results: 47
+2025-11-19 03:48:36,363 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:48:36,363 - 2025-11-18-23:29:22 - INFO - Current length of results: 48
+2025-11-19 03:48:36,501 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 86656 (>= 30000)
+2025-11-19 03:48:36,502 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:48:36,502 - 2025-11-18-23:29:22 - INFO - Current length of results: 49
+2025-11-19 03:48:39,300 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:48:39,301 - 2025-11-18-23:29:22 - INFO - Current length of results: 50
+2025-11-19 03:48:45,180 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:48:45,180 - 2025-11-18-23:29:22 - INFO - Current length of results: 51
+2025-11-19 03:48:48,155 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:48:48,155 - 2025-11-18-23:29:22 - INFO - Current length of results: 52
+2025-11-19 03:48:52,271 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:48:52,272 - 2025-11-18-23:29:22 - INFO - Current length of results: 53
+2025-11-19 03:48:59,438 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:48:59,438 - 2025-11-18-23:29:22 - INFO - Current length of results: 54
+2025-11-19 03:49:07,033 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:49:07,034 - 2025-11-18-23:29:22 - INFO - Current length of results: 55
+2025-11-19 03:49:10,377 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:49:10,377 - 2025-11-18-23:29:22 - INFO - Current length of results: 56
+2025-11-19 03:49:16,955 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:49:16,955 - 2025-11-18-23:29:22 - INFO - Current length of results: 57
+2025-11-19 03:49:19,693 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:49:19,693 - 2025-11-18-23:29:22 - INFO - Current length of results: 58
+2025-11-19 03:49:25,502 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:49:25,502 - 2025-11-18-23:29:22 - INFO - Current length of results: 59
+2025-11-19 03:49:43,939 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    },
+    {
+      "cwe_id": 185,
+      "cwe_title": "Incorrect Regular Expression"
+    }
+  ]
+}
+2025-11-19 03:49:43,939 - 2025-11-18-23:29:22 - INFO - Current length of results: 60
+2025-11-19 03:49:53,366 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":494,"cwe_title":"Download of Code Without Integrity Check"}]}
+2025-11-19 03:49:53,367 - 2025-11-18-23:29:22 - INFO - Current length of results: 61
+2025-11-19 03:50:09,210 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":1104,"cwe_title":"Use of Unmaintained Third Party Components"}]}
+2025-11-19 03:50:09,210 - 2025-11-18-23:29:22 - INFO - Current length of results: 62
+2025-11-19 03:50:25,174 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 287,
+      "cwe_title": "Improper Authentication"
+    },
+    {
+      "cwe_id": 290,
+      "cwe_title": "Authentication Bypass by Spoofing"
+    }
+  ]
+}
+2025-11-19 03:50:25,174 - 2025-11-18-23:29:22 - INFO - Current length of results: 63
+2025-11-19 03:50:30,170 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:50:30,170 - 2025-11-18-23:29:22 - INFO - Current length of results: 64
+2025-11-19 03:50:50,396 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    },
+    {
+      "cwe_id": 284,
+      "cwe_title": "Improper Access Control"
+    },
+    {
+      "cwe_id": 346,
+      "cwe_title": "Origin Validation Error"
+    },
+    {
+      "cwe_id": 287,
+      "cwe_title": "Improper Authentication"
+    }
+  ]
+}
+2025-11-19 03:50:50,396 - 2025-11-18-23:29:22 - INFO - Current length of results: 65
+2025-11-19 03:50:54,964 - 2025-11-18-23:29:22 - ERROR - Error in tool 'get_file_diff' with args {'filename': 'a/screens/render-form-field/index.tsx', 'line_end': 400, 'line_start': 200}: TypeError("CWEDeterminer._llm_security_classify_with_tools.<locals>.get_file_diff() got an unexpected keyword argument 'line_end'")
+2025-11-19 03:51:00,360 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    }
+  ]
+}
+2025-11-19 03:51:00,360 - 2025-11-18-23:29:22 - INFO - Current length of results: 66
+2025-11-19 03:51:04,241 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:51:04,242 - 2025-11-18-23:29:22 - INFO - Current length of results: 67
+2025-11-19 03:51:08,532 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:51:08,532 - 2025-11-18-23:29:22 - INFO - Current length of results: 68
+2025-11-19 03:51:14,126 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:51:14,126 - 2025-11-18-23:29:22 - INFO - Current length of results: 69
+2025-11-19 03:51:19,071 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:51:19,071 - 2025-11-18-23:29:22 - INFO - Current length of results: 70
+2025-11-19 03:51:23,077 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:51:23,078 - 2025-11-18-23:29:22 - INFO - Current length of results: 71
+2025-11-19 03:51:27,194 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:51:27,194 - 2025-11-18-23:29:22 - INFO - Current length of results: 72
+2025-11-19 03:51:43,147 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":306,"cwe_title":"Missing Authentication for Critical Function"},{"cwe_id":862,"cwe_title":"Missing Authorization"}]}
+2025-11-19 03:51:43,147 - 2025-11-18-23:29:22 - INFO - Current length of results: 73
+2025-11-19 03:51:43,236 - 2025-11-18-23:29:22 - INFO - Skipping PR due to input tokens = 50707 (>= 30000)
+2025-11-19 03:51:43,236 - 2025-11-18-23:29:22 - INFO - resp is None, returning False
+2025-11-19 03:51:43,236 - 2025-11-18-23:29:22 - INFO - Current length of results: 74
+2025-11-19 03:51:52,929 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":20,"cwe_title":"Improper Input Validation"},{"cwe_id":400,"cwe_title":"Uncontrolled Resource Consumption"}]}
+2025-11-19 03:51:52,929 - 2025-11-18-23:29:22 - INFO - Current length of results: 75
+2025-11-19 03:52:04,277 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 345,
+      "cwe_title": "Insufficient Verification of Data Authenticity"
+    },
+    {
+      "cwe_id": 287,
+      "cwe_title": "Improper Authentication"
+    }
+  ]
+}
+2025-11-19 03:52:04,277 - 2025-11-18-23:29:22 - INFO - Current length of results: 76
+2025-11-19 03:52:08,622 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:52:08,622 - 2025-11-18-23:29:22 - INFO - Current length of results: 77
+2025-11-19 03:52:20,215 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1395,
+      "cwe_title": "Dependency on Vulnerable Third-Party Component"
+    }
+  ]
+}
+2025-11-19 03:52:20,216 - 2025-11-18-23:29:22 - INFO - Current length of results: 78
+2025-11-19 03:52:31,783 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 1395,
+      "cwe_title": "Dependency on Vulnerable Third-Party Component"
+    }
+  ]
+}
+2025-11-19 03:52:31,784 - 2025-11-18-23:29:22 - INFO - Current length of results: 79
+2025-11-19 03:52:38,455 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:52:38,455 - 2025-11-18-23:29:22 - INFO - Current length of results: 80
+2025-11-19 03:52:42,484 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": false,
+  "cwe_lst": []
+}
+2025-11-19 03:52:42,484 - 2025-11-18-23:29:22 - INFO - Current length of results: 81
+2025-11-19 03:52:56,560 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {
+  "is_security_patch": true,
+  "cwe_lst": [
+    {
+      "cwe_id": 20,
+      "cwe_title": "Improper Input Validation"
+    },
+    {
+      "cwe_id": 125,
+      "cwe_title": "Out-of-bounds Read"
+    }
+  ]
+}
+2025-11-19 03:52:56,560 - 2025-11-18-23:29:22 - INFO - Current length of results: 82
+2025-11-19 03:53:05,506 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":true,"cwe_lst":[{"cwe_id":377,"cwe_title":"Insecure Temporary File"},{"cwe_id":331,"cwe_title":"Insufficient Entropy"}]}
+2025-11-19 03:53:05,506 - 2025-11-18-23:29:22 - INFO - Current length of results: 83
+2025-11-19 03:53:15,624 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:53:15,624 - 2025-11-18-23:29:22 - INFO - Current length of results: 84
+2025-11-19 03:53:20,388 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:53:20,388 - 2025-11-18-23:29:22 - INFO - Current length of results: 85
+2025-11-19 03:53:24,044 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:53:24,044 - 2025-11-18-23:29:22 - INFO - Current length of results: 86
+2025-11-19 03:53:31,438 - 2025-11-18-23:29:22 - INFO - Final raw model output (truncated): {"is_security_patch":false,"cwe_lst":[]}
+2025-11-19 03:53:31,438 - 2025-11-18-23:29:22 - INFO - Current length of results: 87
+2025-11-19 03:53:31,438 - 2025-11-18-23:29:22 - INFO - Writing final Parquet chunk.
+2025-11-19 03:53:31,449 - 2025-11-18-23:29:22 - INFO - CWE classification completed.

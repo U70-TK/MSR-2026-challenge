@@ -328,10 +328,20 @@ class AppInstance():
         self.lang_determiner.determine_lang()
 
     def determine_cwe_human_pr(self):
-        human_pr_with_diffs = pd.read_parquet("./output/human_pr_with_diffs.parquet")
+        human_pr_with_diffs = pd.read_parquet("./data/human_pr_with_diffs.parquet")
         cwe_determiner = CWEDeterminer(
             table_name=AIDev.HUMAN_PULL_REQUEST, 
-            df=human_pr_with_diffs,
+            df=human_pr_with_diffs[500:],
+            logger=self.logger,
+            data_writer=self.data_writer
+        )
+        cwe_determiner.run_llm_for_dataframe()
+    
+    def determine_cwe_llm_pr(self):
+        llm_pr_with_diffs = pd.read_parquet("./data/llm_pr_with_diffs.parquet")
+        cwe_determiner = CWEDeterminer(
+            table_name=AIDev.ALL_PULL_REQUEST, 
+            df=llm_pr_with_diffs[12400:],
             logger=self.logger,
             data_writer=self.data_writer
         )

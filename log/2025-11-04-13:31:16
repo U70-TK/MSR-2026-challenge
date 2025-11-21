@@ -1,7 +1,0 @@
-2025-11-04 17:31:16,712 - 2025-11-04-13:31:16 - INFO - Loading table 'human_pull_request' from hao-li/AIDev
-2025-11-04 17:31:19,317 - 2025-11-04-13:31:16 - INFO - Loaded human_pull_request (6,618 rows)
-2025-11-04 17:31:19,319 - 2025-11-04-13:31:16 - INFO - Scanning 6,618 Human PR descriptions dynamically...
-2025-11-04 17:31:19,319 - 2025-11-04-13:31:16 - INFO - ---------- Loading keyword list ----------
-2025-11-04 17:31:19,350 - 2025-11-04-13:31:16 - INFO - Collected 414 unique regex patterns
-2025-11-04 17:31:19,392 - 2025-11-04-13:31:16 - INFO - Successfully compiled 414 regex patterns.
-2025-11-04 17:31:19,392 - 2025-11-04-13:31:16 - INFO - ---------- Loading keyword finished ----------

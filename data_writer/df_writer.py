@@ -6,7 +6,7 @@ class DF_writer:
     def __init__(self, output_dir: str):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
-        self.utc_minus_4 = timezone(timedelta(hours=-4))
+        self.utc_minus_4 = timezone(timedelta(hours=-5))
 
     def _get_timestamped_path(self, prefix: str, extension: str = "parquet") -> str:
         timestamp = datetime.now(self.utc_minus_4).strftime("%Y-%m-%d-%H:%M:%S")

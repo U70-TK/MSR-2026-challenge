@@ -1,8 +1,0 @@
-2025-11-07 01:22:47,793 - 2025-11-06-21:22:47 - INFO - Loading table 'all_pull_request' from hf://datasets/hao-li/AIDev
-2025-11-07 01:22:47,793 - 2025-11-06-21:22:47 - INFO - hf://datasets/hao-li/AIDevall_pull_request.parquet
-2025-11-07 01:22:56,961 - 2025-11-06-21:22:47 - INFO - Loaded all_pull_request (932,791 rows)
-2025-11-07 01:22:56,961 - 2025-11-06-21:22:47 - INFO - Scanning 932,791 all_pull_request dynamically...
-2025-11-07 01:22:56,962 - 2025-11-06-21:22:47 - INFO - ---------- Loading keyword list ----------
-2025-11-07 01:22:56,995 - 2025-11-06-21:22:47 - INFO - Collected 429 unique regex patterns
-2025-11-07 01:22:57,013 - 2025-11-06-21:22:47 - INFO - Successfully compiled 429 regex patterns.
-2025-11-07 01:22:57,013 - 2025-11-06-21:22:47 - INFO - ---------- Loading keyword finished ----------

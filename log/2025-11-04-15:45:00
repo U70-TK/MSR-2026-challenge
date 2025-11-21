@@ -1,8 +1,0 @@
-2025-11-04 19:45:00,889 - 2025-11-04-15:45:00 - INFO - Loading table 'pr_commits' from hf://datasets/hao-li/AIDev
-2025-11-04 19:45:00,890 - 2025-11-04-15:45:00 - INFO - hf://datasets/hao-li/AIDevpr_commits.parquet
-2025-11-04 19:45:06,420 - 2025-11-04-15:45:00 - INFO - Loaded pr_commits (88,576 rows)
-2025-11-04 19:45:06,452 - 2025-11-04-15:45:00 - INFO - Scanning 88,576 pr_commits dynamically...
-2025-11-04 19:45:06,455 - 2025-11-04-15:45:00 - INFO - ---------- Loading keyword list ----------
-2025-11-04 19:45:06,570 - 2025-11-04-15:45:00 - INFO - Collected 414 unique regex patterns
-2025-11-04 19:45:07,101 - 2025-11-04-15:45:00 - INFO - Successfully compiled 414 regex patterns.
-2025-11-04 19:45:07,102 - 2025-11-04-15:45:00 - INFO - ---------- Loading keyword finished ----------

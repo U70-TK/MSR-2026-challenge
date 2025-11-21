@@ -1,0 +1,9 @@
+2025-11-04 19:34:29,632 - 2025-11-04-15:34:29 - INFO - Loading table 'pr_commits' from hao-li/AIDev
+2025-11-04 19:34:31,198 - 2025-11-04-15:34:29 - ERROR - Cannot load pr_commits from hao-li/AIDev: 401 Client Error. (Request ID: Root=1-690a5547-2c462bef5351e9df764541df;fdeb36fb-f49b-42db-abe4-2fe3cacff278)
+
+Repository Not Found for url: https://huggingface.co/hao-li/AIDev/resolve/main/pr_commits.parquet.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+Invalid username or password.
+2025-11-04 19:34:31,199 - 2025-11-04-15:34:29 - WARNING - Dataframe None missing message column. 
+2025-11-04 19:34:31,292 - 2025-11-04-15:34:29 - INFO - No data to save — DataFrame is empty.

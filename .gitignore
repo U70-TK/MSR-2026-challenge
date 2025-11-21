@@ -8,8 +8,6 @@ output/
 
 lid.176.bin
 
-/log
-
 # C extensions
 *.so
 

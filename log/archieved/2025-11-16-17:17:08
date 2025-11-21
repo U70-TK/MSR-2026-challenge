@@ -1,0 +1,11 @@
+2025-11-16 21:17:08,850 - 2025-11-16-17:17:08 - INFO - Starting CWE LLM classification on 687 rows.
+2025-11-16 21:36:29,204 - 2025-11-16-17:17:08 - INFO - Saving parquet chunk at row 99
+2025-11-16 21:55:00,456 - 2025-11-16-17:17:08 - INFO - Saving parquet chunk at row 199
+2025-11-16 22:07:23,982 - 2025-11-16-17:17:08 - ERROR - [Attempt 1] LLM call failure: ResponseError("error parsing tool call: raw='', err=unexpected end of JSON input")
+2025-11-16 22:16:11,887 - 2025-11-16-17:17:08 - INFO - Saving parquet chunk at row 299
+2025-11-16 22:20:11,583 - 2025-11-16-17:17:08 - WARNING - [Attempt 1] JSON validation failed, attempting regex parse.
+2025-11-16 22:30:04,601 - 2025-11-16-17:17:08 - INFO - Saving parquet chunk at row 399
+2025-11-16 22:47:40,902 - 2025-11-16-17:17:08 - INFO - Saving parquet chunk at row 499
+2025-11-16 23:08:55,073 - 2025-11-16-17:17:08 - INFO - Saving parquet chunk at row 599
+2025-11-16 23:31:02,794 - 2025-11-16-17:17:08 - INFO - Saving final parquet chunk.
+2025-11-16 23:31:02,810 - 2025-11-16-17:17:08 - INFO - CWE classification completed.

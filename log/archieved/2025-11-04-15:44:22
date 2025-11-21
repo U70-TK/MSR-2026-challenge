@@ -1,0 +1,5 @@
+2025-11-04 19:44:22,313 - 2025-11-04-15:44:22 - INFO - Loading table 'pr_commits' from hf://datasets/hao-li/AIDev
+2025-11-04 19:44:22,313 - 2025-11-04-15:44:22 - INFO - hf://datasets/hao-li/AIDevpr_commits.parquet
+2025-11-04 19:44:25,772 - 2025-11-04-15:44:22 - ERROR - Cannot load pr_commits from hf://datasets/hao-li/AIDev: datasets/hao-li/AIDevpr_commits.parquet
+2025-11-04 19:44:25,773 - 2025-11-04-15:44:22 - WARNING - Dataframe None missing message column. 
+2025-11-04 19:44:25,792 - 2025-11-04-15:44:22 - INFO - No data to save — DataFrame is empty.

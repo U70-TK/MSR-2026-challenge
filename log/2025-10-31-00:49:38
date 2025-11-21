@@ -1,6 +1,0 @@
-2025-10-30 20:49:38,959 - 2025-10-31-00:49:38 - INFO - Loading table 'all_pull_request' from hao-li/AIDev
-2025-10-30 20:49:41,537 - 2025-10-31-00:49:38 - INFO - Loaded all_pull_request (932,791 rows)
-2025-10-30 20:49:41,583 - 2025-10-31-00:49:38 - INFO - Scanning 932,791 PR descriptions
-2025-10-30 20:49:43,268 - 2025-10-31-00:49:38 - INFO - ---------- Loading keyword list ----------
-2025-10-30 20:49:43,269 - 2025-10-31-00:49:38 - INFO - ---------- Regex Length: 415 ----------
-2025-10-30 20:49:43,269 - 2025-10-31-00:49:38 - INFO - ---------- Loading keyword finished ----------

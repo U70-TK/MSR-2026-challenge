@@ -1,0 +1,5 @@
+2025-11-13 18:07:55,754 - 2025-11-13-14:07:55 - INFO - Loading table 'all_pull_request' from hf://datasets/hao-li/AIDev
+2025-11-13 18:07:55,755 - 2025-11-13-14:07:55 - INFO - hf://datasets/hao-li/AIDevall_pull_request.parquet
+2025-11-13 18:08:11,102 - 2025-11-13-14:07:55 - INFO - Loaded all_pull_request (932,791 rows)
+2025-11-13 18:08:11,103 - 2025-11-13-14:07:55 - INFO - Set current data frame to: all_pull_request
+2025-11-13 18:08:59,874 - 2025-11-13-14:07:55 - INFO - Saved output to: ./output/pr_description_lang_2025-11-13-14:08:59.parquet

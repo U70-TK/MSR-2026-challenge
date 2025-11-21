@@ -1,7 +1,7 @@
 from app_instance import AppInstance
 from datetime import datetime, timedelta, timezone
 
-utc_minus_4 = timezone(timedelta(hours=-4))
+utc_minus_4 = timezone(timedelta(hours=-5))
 KEYWORD_DIR = "./keywords_regex"
 LOG_DIR = f"./log/{datetime.now(utc_minus_4).strftime('%Y-%m-%d-%H:%M:%S')}"
 HUGGING_FACE_REPO = "hao-li/AIDev/"
@@ -21,7 +21,7 @@ def main():
     # app.match_llm_pr_desciption_title_merge()
     # app.detect_pr_description_lang()
     # app.match_human_pr_description_title_merge()
-    app.determine_cwe_human_pr()
+    app.determine_cwe_llm_pr()
     
 if __name__ == '__main__':
     main()
