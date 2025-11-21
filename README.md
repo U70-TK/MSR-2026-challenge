@@ -10,4 +10,4 @@ Command:
 source venv/bin/activate
 nohup python3 main.py > output.log 2>&1 &
 
-[Huggingface repo](https://huggingface.co/datasets/felixwangg/AIDev-CWE-Classification/blob/main/README.md)
+[Huggingface repo](https://huggingface.co/datasets/felixwangg/AIDev-CWE-Classification)
