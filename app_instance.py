@@ -346,3 +346,13 @@ class AppInstance():
             data_writer=self.data_writer
         )
         cwe_determiner.run_llm_for_dataframe()
+
+    def determine_cwe_llm_pr(self):
+        llm_pr_with_diffs = pd.read_parquet("./output/llm_pr_with_diffs.parquet")
+        cwe_determiner = CWEDeterminer(
+            table_name=AIDev.ALL_PULL_REQUEST,
+            df=llm_pr_with_diffs,
+            logger=self.logger,
+            data_writer=self.data_writer
+        )
+        cwe_determiner.run_llm_for_dataframe()
