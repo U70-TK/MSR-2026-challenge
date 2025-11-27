@@ -39,6 +39,6 @@ def merge_parquets_with_prefix(root_path: str,
 if __name__ == "__main__":
     merge_parquets_with_prefix(
         root_path="/home/t577wang/MSR-2026-challenge/output",
-        prefix="human_pull_request_cwe_output",
-        output_filename="AIDev.HUMAN_PULL_REQUEST.parquet"
+        prefix="all_pull_request_cwe_output",
+        output_filename="AIDev.ALL_PULL_REQUEST.parquet"
     )
